@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B00070BB2C6C3B7B00C2A65E /* CheatDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00070BA2C6C3B7B00C2A65E /* CheatDay.swift */; };
 		B067A54F2C697E1D009CE862 /* CheatDayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B067A54E2C697E1D009CE862 /* CheatDayApp.swift */; };
-		B067A5512C697E1D009CE862 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B067A5502C697E1D009CE862 /* ContentView.swift */; };
+		B067A5512C697E1D009CE862 /* ContentView.swift_bk in Sources */ = {isa = PBXBuildFile; fileRef = B067A5502C697E1D009CE862 /* ContentView.swift_bk */; };
 		B067A5532C697E1D009CE862 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = B067A5522C697E1D009CE862 /* Item.swift */; };
 		B067A5552C697E20009CE862 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B067A5542C697E20009CE862 /* Assets.xcassets */; };
 		B067A5592C697E20009CE862 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B067A5582C697E20009CE862 /* Preview Assets.xcassets */; };
@@ -17,6 +18,9 @@
 		B067A56F2C697E21009CE862 /* CheatDayUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B067A56E2C697E21009CE862 /* CheatDayUITestsLaunchTests.swift */; };
 		B067A57D2C699C25009CE862 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B067A57C2C699C25009CE862 /* GoogleService-Info.plist */; };
 		B067A57F2C699F66009CE862 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = B067A57E2C699F66009CE862 /* Readme.md */; };
+		B0706E3B2C6C3C14004EC879 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0706E3A2C6C3C14004EC879 /* Activity.swift */; };
+		B0706E3D2C6C3FE7004EC879 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0706E3C2C6C3FE7004EC879 /* ContentView.swift */; };
+		B0706E3F2C6C4837004EC879 /* CheatDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0706E3E2C6C4837004EC879 /* CheatDayView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B00070BA2C6C3B7B00C2A65E /* CheatDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheatDay.swift; sourceTree = "<group>"; };
 		B067A54B2C697E1D009CE862 /* CheatDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheatDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B067A54E2C697E1D009CE862 /* CheatDayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheatDayApp.swift; sourceTree = "<group>"; };
-		B067A5502C697E1D009CE862 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B067A5502C697E1D009CE862 /* ContentView.swift_bk */ = {isa = PBXFileReference; lastKnownFileType = text; path = ContentView.swift_bk; sourceTree = "<group>"; };
 		B067A5522C697E1D009CE862 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		B067A5542C697E20009CE862 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B067A5562C697E20009CE862 /* CheatDay.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CheatDay.entitlements; sourceTree = "<group>"; };
@@ -52,6 +57,9 @@
 		B067A57B2C6983AF009CE862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B067A57C2C699C25009CE862 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B067A57E2C699F66009CE862 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
+		B0706E3A2C6C3C14004EC879 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		B0706E3C2C6C3FE7004EC879 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B0706E3E2C6C4837004EC879 /* CheatDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheatDayView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,8 +114,12 @@
 				B067A57C2C699C25009CE862 /* GoogleService-Info.plist */,
 				B067A57B2C6983AF009CE862 /* Info.plist */,
 				B067A54E2C697E1D009CE862 /* CheatDayApp.swift */,
-				B067A5502C697E1D009CE862 /* ContentView.swift */,
+				B067A5502C697E1D009CE862 /* ContentView.swift_bk */,
+				B0706E3C2C6C3FE7004EC879 /* ContentView.swift */,
+				B0706E3E2C6C4837004EC879 /* CheatDayView.swift */,
 				B067A5522C697E1D009CE862 /* Item.swift */,
+				B00070BA2C6C3B7B00C2A65E /* CheatDay.swift */,
+				B0706E3A2C6C3C14004EC879 /* Activity.swift */,
 				B067A5542C697E20009CE862 /* Assets.xcassets */,
 				B067A5562C697E20009CE862 /* CheatDay.entitlements */,
 				B067A5572C697E20009CE862 /* Preview Content */,
@@ -272,7 +284,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B067A5512C697E1D009CE862 /* ContentView.swift in Sources */,
+				B0706E3B2C6C3C14004EC879 /* Activity.swift in Sources */,
+				B0706E3D2C6C3FE7004EC879 /* ContentView.swift in Sources */,
+				B0706E3F2C6C4837004EC879 /* CheatDayView.swift in Sources */,
+				B00070BB2C6C3B7B00C2A65E /* CheatDay.swift in Sources */,
+				B067A5512C697E1D009CE862 /* ContentView.swift_bk in Sources */,
 				B067A5532C697E1D009CE862 /* Item.swift in Sources */,
 				B067A54F2C697E1D009CE862 /* CheatDayApp.swift in Sources */,
 			);
@@ -431,10 +447,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = CheatDay/CheatDay.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CheatDay/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = K954L25GWL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CheatDay/Info.plist;
@@ -456,6 +473,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = a.CheatDay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -470,10 +488,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = CheatDay/CheatDay.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CheatDay/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = K954L25GWL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CheatDay/Info.plist;
@@ -495,6 +514,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = a.CheatDay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;

@@ -1,66 +1,42 @@
-//
-//  ContentView.swift
-//  CheatDay
-//
-//  Created by 齊藤広樹 on 12/8/2024.
-//
-
 import SwiftUI
-import SwiftData
 
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
+    @State private var cheatDays: [CheatDay] = []
 
     var body: some View {
-        NavigationSplitView {
+        NavigationView {
             List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+                ForEach(cheatDays, id: \.id) { cheatDay in
+                    NavigationLink(destination: CheatDayView(cheatDay: cheatDay)) {
+                        Text("Cheat Day on \(cheatDay.date, formatter: itemFormatter)")
                     }
                 }
-                .onDelete(perform: deleteItems)
             }
-#if os(macOS)
-            .navigationSplitViewColumnWidth(min: 180, ideal: 200)
-#endif
+            .navigationTitle("Cheat Days")
             .toolbar {
-#if os(iOS)
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-#endif
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+                ToolbarItem(placement: .automatic) { // For macOS, use .automatic or specific placement like .primaryAction
+                    Button(action: addCheatDay) {
+                        Label("Add Cheat Day", systemImage: "plus")
                     }
                 }
             }
-        } detail: {
-            Text("Select an item")
         }
     }
 
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
-            }
-        }
+    private func addCheatDay() {
+        let newCheatDay = CheatDay(date: Date(), activities: [])
+        cheatDays.append(newCheatDay)
     }
 }
 
-#Preview {
-    ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
+private let itemFormatter: DateFormatter = {
+    let formatter = DateFormatter()
+    formatter.dateStyle = .long
+    return formatter
+}()
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }
