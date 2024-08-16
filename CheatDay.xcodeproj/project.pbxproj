@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B00070BB2C6C3B7B00C2A65E /* CheatDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00070BA2C6C3B7B00C2A65E /* CheatDay.swift */; };
 		B067A54F2C697E1D009CE862 /* CheatDayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B067A54E2C697E1D009CE862 /* CheatDayApp.swift */; };
-		B067A5512C697E1D009CE862 /* ContentView.swift_bk in Sources */ = {isa = PBXBuildFile; fileRef = B067A5502C697E1D009CE862 /* ContentView.swift_bk */; };
 		B067A5532C697E1D009CE862 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = B067A5522C697E1D009CE862 /* Item.swift */; };
 		B067A5552C697E20009CE862 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B067A5542C697E20009CE862 /* Assets.xcassets */; };
 		B067A5592C697E20009CE862 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B067A5582C697E20009CE862 /* Preview Assets.xcassets */; };
@@ -18,9 +16,12 @@
 		B067A56F2C697E21009CE862 /* CheatDayUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B067A56E2C697E21009CE862 /* CheatDayUITestsLaunchTests.swift */; };
 		B067A57D2C699C25009CE862 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B067A57C2C699C25009CE862 /* GoogleService-Info.plist */; };
 		B067A57F2C699F66009CE862 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = B067A57E2C699F66009CE862 /* Readme.md */; };
-		B0706E3B2C6C3C14004EC879 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0706E3A2C6C3C14004EC879 /* Activity.swift */; };
-		B0706E3D2C6C3FE7004EC879 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0706E3C2C6C3FE7004EC879 /* ContentView.swift */; };
-		B0706E3F2C6C4837004EC879 /* CheatDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0706E3E2C6C4837004EC879 /* CheatDayView.swift */; };
+		B06DFB562C6F2BE700FCC272 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06DFB552C6F2BE700FCC272 /* ContentView.swift */; };
+		B06DFB582C6F2C0900FCC272 /* GoalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06DFB572C6F2C0900FCC272 /* GoalsView.swift */; };
+		B06DFB5A2C6F2C1F00FCC272 /* PlansView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06DFB592C6F2C1F00FCC272 /* PlansView.swift */; };
+		B06DFB5C2C6F2C3000FCC272 /* RewardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06DFB5B2C6F2C3000FCC272 /* RewardsView.swift */; };
+		B06DFB5E2C6F2C4300FCC272 /* CoursesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06DFB5D2C6F2C4300FCC272 /* CoursesView.swift */; };
+		B06DFB602C6F2C6C00FCC272 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06DFB5F2C6F2C6C00FCC272 /* Goal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,10 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B00070BA2C6C3B7B00C2A65E /* CheatDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheatDay.swift; sourceTree = "<group>"; };
 		B067A54B2C697E1D009CE862 /* CheatDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheatDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B067A54E2C697E1D009CE862 /* CheatDayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheatDayApp.swift; sourceTree = "<group>"; };
-		B067A5502C697E1D009CE862 /* ContentView.swift_bk */ = {isa = PBXFileReference; lastKnownFileType = text; path = ContentView.swift_bk; sourceTree = "<group>"; };
 		B067A5522C697E1D009CE862 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		B067A5542C697E20009CE862 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B067A5562C697E20009CE862 /* CheatDay.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CheatDay.entitlements; sourceTree = "<group>"; };
@@ -57,9 +56,12 @@
 		B067A57B2C6983AF009CE862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B067A57C2C699C25009CE862 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B067A57E2C699F66009CE862 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
-		B0706E3A2C6C3C14004EC879 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
-		B0706E3C2C6C3FE7004EC879 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		B0706E3E2C6C4837004EC879 /* CheatDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheatDayView.swift; sourceTree = "<group>"; };
+		B06DFB552C6F2BE700FCC272 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B06DFB572C6F2C0900FCC272 /* GoalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsView.swift; sourceTree = "<group>"; };
+		B06DFB592C6F2C1F00FCC272 /* PlansView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlansView.swift; sourceTree = "<group>"; };
+		B06DFB5B2C6F2C3000FCC272 /* RewardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsView.swift; sourceTree = "<group>"; };
+		B06DFB5D2C6F2C4300FCC272 /* CoursesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesView.swift; sourceTree = "<group>"; };
+		B06DFB5F2C6F2C6C00FCC272 /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,12 +116,13 @@
 				B067A57C2C699C25009CE862 /* GoogleService-Info.plist */,
 				B067A57B2C6983AF009CE862 /* Info.plist */,
 				B067A54E2C697E1D009CE862 /* CheatDayApp.swift */,
-				B067A5502C697E1D009CE862 /* ContentView.swift_bk */,
-				B0706E3C2C6C3FE7004EC879 /* ContentView.swift */,
-				B0706E3E2C6C4837004EC879 /* CheatDayView.swift */,
+				B06DFB552C6F2BE700FCC272 /* ContentView.swift */,
+				B06DFB572C6F2C0900FCC272 /* GoalsView.swift */,
+				B06DFB592C6F2C1F00FCC272 /* PlansView.swift */,
+				B06DFB5B2C6F2C3000FCC272 /* RewardsView.swift */,
+				B06DFB5D2C6F2C4300FCC272 /* CoursesView.swift */,
+				B06DFB5F2C6F2C6C00FCC272 /* Goal.swift */,
 				B067A5522C697E1D009CE862 /* Item.swift */,
-				B00070BA2C6C3B7B00C2A65E /* CheatDay.swift */,
-				B0706E3A2C6C3C14004EC879 /* Activity.swift */,
 				B067A5542C697E20009CE862 /* Assets.xcassets */,
 				B067A5562C697E20009CE862 /* CheatDay.entitlements */,
 				B067A5572C697E20009CE862 /* Preview Content */,
@@ -284,11 +287,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0706E3B2C6C3C14004EC879 /* Activity.swift in Sources */,
-				B0706E3D2C6C3FE7004EC879 /* ContentView.swift in Sources */,
-				B0706E3F2C6C4837004EC879 /* CheatDayView.swift in Sources */,
-				B00070BB2C6C3B7B00C2A65E /* CheatDay.swift in Sources */,
-				B067A5512C697E1D009CE862 /* ContentView.swift_bk in Sources */,
+				B06DFB562C6F2BE700FCC272 /* ContentView.swift in Sources */,
+				B06DFB5C2C6F2C3000FCC272 /* RewardsView.swift in Sources */,
+				B06DFB602C6F2C6C00FCC272 /* Goal.swift in Sources */,
+				B06DFB582C6F2C0900FCC272 /* GoalsView.swift in Sources */,
+				B06DFB5A2C6F2C1F00FCC272 /* PlansView.swift in Sources */,
+				B06DFB5E2C6F2C4300FCC272 /* CoursesView.swift in Sources */,
 				B067A5532C697E1D009CE862 /* Item.swift in Sources */,
 				B067A54F2C697E1D009CE862 /* CheatDayApp.swift in Sources */,
 			);
@@ -530,6 +534,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K954L25GWL;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
@@ -537,7 +542,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = a.CheatDayTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -552,6 +557,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K954L25GWL;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
@@ -573,6 +579,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K954L25GWL;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
@@ -594,6 +601,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K954L25GWL;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
