@@ -22,6 +22,7 @@
 		B06DFB5C2C6F2C3000FCC272 /* RewardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06DFB5B2C6F2C3000FCC272 /* RewardsView.swift */; };
 		B06DFB5E2C6F2C4300FCC272 /* CoursesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06DFB5D2C6F2C4300FCC272 /* CoursesView.swift */; };
 		B06DFB602C6F2C6C00FCC272 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06DFB5F2C6F2C6C00FCC272 /* Goal.swift */; };
+		B06DFB622C6F330400FCC272 /* GoalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06DFB612C6F330400FCC272 /* GoalData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		B06DFB5B2C6F2C3000FCC272 /* RewardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsView.swift; sourceTree = "<group>"; };
 		B06DFB5D2C6F2C4300FCC272 /* CoursesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesView.swift; sourceTree = "<group>"; };
 		B06DFB5F2C6F2C6C00FCC272 /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
+		B06DFB612C6F330400FCC272 /* GoalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				B06DFB5B2C6F2C3000FCC272 /* RewardsView.swift */,
 				B06DFB5D2C6F2C4300FCC272 /* CoursesView.swift */,
 				B06DFB5F2C6F2C6C00FCC272 /* Goal.swift */,
+				B06DFB612C6F330400FCC272 /* GoalData.swift */,
 				B067A5522C697E1D009CE862 /* Item.swift */,
 				B067A5542C697E20009CE862 /* Assets.xcassets */,
 				B067A5562C697E20009CE862 /* CheatDay.entitlements */,
@@ -290,6 +293,7 @@
 				B06DFB562C6F2BE700FCC272 /* ContentView.swift in Sources */,
 				B06DFB5C2C6F2C3000FCC272 /* RewardsView.swift in Sources */,
 				B06DFB602C6F2C6C00FCC272 /* Goal.swift in Sources */,
+				B06DFB622C6F330400FCC272 /* GoalData.swift in Sources */,
 				B06DFB582C6F2C0900FCC272 /* GoalsView.swift in Sources */,
 				B06DFB5A2C6F2C1F00FCC272 /* PlansView.swift in Sources */,
 				B06DFB5E2C6F2C4300FCC272 /* CoursesView.swift in Sources */,

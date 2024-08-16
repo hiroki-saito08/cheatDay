@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var goalData: GoalData  // Ensures it’s expected to find GoalData
+
     var body: some View {
         TabView {
             GoalsView()
