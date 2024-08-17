@@ -20,7 +20,7 @@
 		B06DFB582C6F2C0900FCC272 /* GoalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06DFB572C6F2C0900FCC272 /* GoalsView.swift */; };
 		B06DFB5A2C6F2C1F00FCC272 /* PlansView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06DFB592C6F2C1F00FCC272 /* PlansView.swift */; };
 		B06DFB5C2C6F2C3000FCC272 /* RewardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06DFB5B2C6F2C3000FCC272 /* RewardsView.swift */; };
-		B06DFB5E2C6F2C4300FCC272 /* CoursesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06DFB5D2C6F2C4300FCC272 /* CoursesView.swift */; };
+		B06DFB5E2C6F2C4300FCC272 /* BattleHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06DFB5D2C6F2C4300FCC272 /* BattleHistoryView.swift */; };
 		B06DFB602C6F2C6C00FCC272 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06DFB5F2C6F2C6C00FCC272 /* Goal.swift */; };
 		B06DFB622C6F330400FCC272 /* GoalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06DFB612C6F330400FCC272 /* GoalData.swift */; };
 /* End PBXBuildFile section */
@@ -61,7 +61,7 @@
 		B06DFB572C6F2C0900FCC272 /* GoalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsView.swift; sourceTree = "<group>"; };
 		B06DFB592C6F2C1F00FCC272 /* PlansView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlansView.swift; sourceTree = "<group>"; };
 		B06DFB5B2C6F2C3000FCC272 /* RewardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsView.swift; sourceTree = "<group>"; };
-		B06DFB5D2C6F2C4300FCC272 /* CoursesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesView.swift; sourceTree = "<group>"; };
+		B06DFB5D2C6F2C4300FCC272 /* BattleHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleHistoryView.swift; sourceTree = "<group>"; };
 		B06DFB5F2C6F2C6C00FCC272 /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 		B06DFB612C6F330400FCC272 /* GoalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,7 +122,7 @@
 				B06DFB572C6F2C0900FCC272 /* GoalsView.swift */,
 				B06DFB592C6F2C1F00FCC272 /* PlansView.swift */,
 				B06DFB5B2C6F2C3000FCC272 /* RewardsView.swift */,
-				B06DFB5D2C6F2C4300FCC272 /* CoursesView.swift */,
+				B06DFB5D2C6F2C4300FCC272 /* BattleHistoryView.swift */,
 				B06DFB5F2C6F2C6C00FCC272 /* Goal.swift */,
 				B06DFB612C6F330400FCC272 /* GoalData.swift */,
 				B067A5522C697E1D009CE862 /* Item.swift */,
@@ -296,7 +296,7 @@
 				B06DFB622C6F330400FCC272 /* GoalData.swift in Sources */,
 				B06DFB582C6F2C0900FCC272 /* GoalsView.swift in Sources */,
 				B06DFB5A2C6F2C1F00FCC272 /* PlansView.swift in Sources */,
-				B06DFB5E2C6F2C4300FCC272 /* CoursesView.swift in Sources */,
+				B06DFB5E2C6F2C4300FCC272 /* BattleHistoryView.swift in Sources */,
 				B067A5532C697E1D009CE862 /* Item.swift in Sources */,
 				B067A54F2C697E1D009CE862 /* CheatDayApp.swift in Sources */,
 			);
