@@ -11,18 +11,18 @@ struct CheatDayScreen: View {
             Spacer()
             
             Text("今日は \(goal.title) チートデイ！")
-                .font(.largeTitle)
+                .font(.custom("Yomogi-Regular", size: 34))
                 .fontWeight(.bold)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal)
             
             Text("おめでとうございます！よく頑張りました！")
-                .font(.title2)
+                .font(.custom("Yomogi-Regular", size: 24))
                 .multilineTextAlignment(.center)
                 .padding(.horizontal)
             
             Text("次のチートデイを少し延ばしてみませんか？")
-                .font(.headline)
+                .font(.custom("Yomogi-Regular", size: 20))
                 .multilineTextAlignment(.center)
                 .padding(.horizontal)
             
@@ -34,6 +34,7 @@ struct CheatDayScreen: View {
             .pickerStyle(MenuPickerStyle())
             .padding(.horizontal)
             .background(Color(UIColor.systemBackground).cornerRadius(10))
+            .font(.custom("Yomogi-Regular", size: 20)) // Apply Yomogi-Regular font to picker
             
             Spacer()
             
@@ -43,24 +44,26 @@ struct CheatDayScreen: View {
                     isPresented = false
                 }) {
                     Text("次のチートデイを延ばす")
-                        .font(.title2)
+                        .font(.custom("Yomogi-Regular", size: 24))
                         .padding()
                         .background(Color.green)
                         .foregroundColor(.white)
                         .cornerRadius(10)
                         .frame(maxWidth: .infinity)
+                        .shadow(radius: 5)
                 }
                 
                 Button(action: {
                     isPresented = false
                 }) {
                     Text("今の周期のままにする")
-                        .font(.title2)
+                        .font(.custom("Yomogi-Regular", size: 24))
                         .padding()
                         .background(Color.gray)
                         .foregroundColor(.white)
                         .cornerRadius(10)
                         .frame(maxWidth: .infinity)
+                        .shadow(radius: 5)
                 }
             }
             .padding(.horizontal, 30)

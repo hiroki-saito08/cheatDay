@@ -7,7 +7,9 @@ struct ContentView: View {
     ]
     
     var body: some View {
-        MainView(goals: $goals) // Replace TabView with MainView
+        MainView(goals: $goals)
+            .customFont(size: 20) // Apply the custom font modifier Yomogi-Regular font
+            .accentColor(.green) // Set a friendly accent color
     }
 }
 

@@ -4,50 +4,50 @@ struct RewardsView: View {
     @Binding var goals: [Goal]
     
     var body: some View {
-        NavigationView {
-            ScrollView {
-                VStack(spacing: 20) {
-                    ForEach(goals) { goal in
-                        VStack(alignment: .leading, spacing: 10) {
-                            Text(goal.title)
-                                .font(.title2)
-                                .fontWeight(.bold)
-                                .padding(.bottom, 5)
-                            
-                            if isCheatDay(for: goal) {
-                                HStack {
-                                    Spacer()
-                                    Text("⭐️ がんばったね！ ⭐️")
-                                        .font(.largeTitle)
-                                        .foregroundColor(.yellow)
-                                    Spacer()
-                                }
-                                Text(goal.reward)
-                                    .font(.title)
-                                    .fontWeight(.bold)
-                                    .foregroundColor(.white)
-                                    .padding()
-                                    .frame(maxWidth: .infinity)
-                                    .background(Color.green)
-                                    .cornerRadius(10)
-                            } else {
-                                Text(goal.reward)
-                                    .font(.title3)
-                                    .padding()
-                                    .frame(maxWidth: .infinity)
-                                    .background(Color.gray.opacity(0.2))
-                                    .cornerRadius(10)
-                            }
-                        }
-                        .padding(.horizontal)
-                    }
-                }
-                .padding(.vertical)
-            }
-            .navigationBarTitle("褒美", displayMode: .inline)
-        }
-    }
-    
+       NavigationView {
+           ScrollView {
+               VStack(spacing: 20) {
+                   ForEach(goals) { goal in
+                       VStack(alignment: .leading, spacing: 10) {
+                           Text(goal.title)
+                               .font(.yomogiHeadline())
+                               .fontWeight(.bold)
+                               .padding(.bottom, 5)
+                           
+                           if isCheatDay(for: goal) {
+                               HStack {
+                                   Spacer()
+                                   Text("⭐️ がんばったね！ ⭐️")
+                                       .font(.yomogiTitle())
+                                       .foregroundColor(.yellow)
+                                   Spacer()
+                               }
+                               Text(goal.reward)
+                                   .font(.yomogiTitle())
+                                   .fontWeight(.bold)
+                                   .foregroundColor(.white)
+                                   .padding()
+                                   .frame(maxWidth: .infinity)
+                                   .background(Color.green)
+                                   .cornerRadius(10)
+                           } else {
+                               Text(goal.reward)
+                                   .font(.yomogiBody())
+                                   .padding()
+                                   .frame(maxWidth: .infinity)
+                                   .background(Color.gray.opacity(0.2))
+                                   .cornerRadius(10)
+                           }
+                       }
+                       .padding(.horizontal)
+                   }
+               }
+               .padding(.vertical)
+           }
+           .navigationBarTitle("褒美", displayMode: .inline)
+       }
+   }
+
     // Determine if today is the cheat day for a given goal
     func isCheatDay(for goal: Goal) -> Bool {
         Calendar.current.isDateInToday(goal.nextCheatDay)

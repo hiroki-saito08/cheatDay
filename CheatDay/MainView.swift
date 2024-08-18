@@ -51,19 +51,23 @@ struct MainView: View {
     func checkForCheatDay() {
         let today = Date()
         let calendar = Calendar.current
-        let todayComponents = calendar.dateComponents([.year, .month, .day], from: today)
-        
+
+        // Re-enable the check to see if the CheatDayScreen was already shown today
         if let lastShownDate = UserDefaults.standard.object(forKey: "LastCheatDayScreenShownDate") as? Date,
            calendar.isDate(lastShownDate, inSameDayAs: today) {
-            // CheatDayScreen was already shown today, so do nothing
+            print("CheatDayScreen was already shown today.")
             return
         }
         
+        // Check if today is a cheat day for any goal
         if let goal = goals.first(where: { Calendar.current.isDate($0.nextCheatDay, inSameDayAs: today) }) {
+            print("Today is a cheat day for goal: \(goal.title)")
             cheatDayGoal = goal
             showCheatDayScreen = true
-            // Mark that the screen has been shown today
+            // Set the current date in UserDefaults to prevent showing it again today
             UserDefaults.standard.set(today, forKey: "LastCheatDayScreenShownDate")
         }
     }
+
+
 }

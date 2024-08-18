@@ -10,10 +10,10 @@ struct BattleHistoryView: View {
                     NavigationLink(destination: GoalGraphView(goal: goal)) {
                         HStack {
                             Text(goal.title)
-                                .font(.headline)
+                                .font(.yomogiHeadline())
                             Spacer()
                             Text("現在の周期は \(goal.cycleDays) 日")
-                                .font(.subheadline)
+                                .font(.yomogiSubheadline())
                                 .foregroundColor(.gray)
                         }
                     }

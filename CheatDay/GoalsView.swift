@@ -10,7 +10,7 @@ struct GoalsView: View {
             VStack {
                 if goals.isEmpty {
                     Text("目標を登録してください！")
-                        .font(.title)
+                        .font(.yomogiTitle())
                         .foregroundColor(.gray)
                         .padding()
                 } else {
@@ -18,14 +18,18 @@ struct GoalsView: View {
                         ForEach(goals) { goal in
                             VStack(alignment: .leading) {
                                 Text(goal.title)
-                                    .font(.headline)
+                                    .font(.yomogiHeadline())
                                 Text("目的: \(goal.purpose)")
+                                    .font(.yomogiBody())
                                 Text("次のチートデイ: \(formattedDate(goal.nextCheatDay))")
+                                    .font(.yomogiBody())
                                 Text("サイクル: \(goal.cycleDays) 日ごと")
+                                    .font(.yomogiBody())
                                 if let encouragement = goal.encouragement {
                                     Text("励ましの言葉: \(encouragement)")
                                         .italic()
                                         .foregroundColor(.secondary)
+                                        .font(.yomogiSubheadline())
                                 }
                             }
                             .contextMenu {
@@ -48,7 +52,7 @@ struct GoalsView: View {
                     }
                 }
             }
-            .navigationBarTitle("目標")
+            .navigationBarTitle("目標", displayMode: .inline) // Match title style with Rewards and Battle History
             .navigationBarItems(trailing: Button(action: {
                 editingGoal = nil
                 showGoalForm = true

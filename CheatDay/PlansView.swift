@@ -10,44 +10,42 @@ struct PlansView: View {
                     ForEach(generateFutureDays(), id: \.self) { day in
                         if isFirstDayOfMonth(day) {
                             Text(monthHeader(for: day))
-                                .font(.headline)
+                                .font(.yomogiHeadline())
                                 .padding(.top, 20)
                         }
                         VStack(alignment: .leading) {
-                            HStack(alignment: .center) { // Center the content vertically
-                                // Date and day of the week on the left, should not wrap
+                            HStack(alignment: .center) {
                                 Text(dayHeader(for: day))
-                                    .font(isCheatDay(day) ? .title : day == Date() ? .headline.bold() : .subheadline)
+                                    .font(isCheatDay(day) ? .yomogiTitle() : day == Date() ? .yomogiHeadline().bold() : .yomogiSubheadline())
                                     .foregroundColor(isCheatDay(day) ? .white : day == Date() ? .red : .gray)
-                                    .lineLimit(1) // Prevent wrapping
+                                    .lineLimit(1)
                                     .padding()
                                     .background(isCheatDay(day) ? Color.green : Color.clear)
                                     .cornerRadius(10)
                                 
                                 Spacer()
 
-                                // Details on the right, should wrap, centered vertically, and larger font size
                                 if let goal = goalForDay(day) {
                                     Text(daysUntil(day) == 0 ? "今日は \(goal.title) チートデイ" : "\(daysUntil(day)) 日後は \(goal.title) チートデイ")
-                                        .font(.title3) // Increased text size
+                                        .font(.yomogiBody())
                                         .foregroundColor(.primary)
                                         .multilineTextAlignment(.leading)
-                                        .lineLimit(nil) // Allow text to wrap to multiple lines
+                                        .lineLimit(nil)
                                         .padding(.leading, 15)
                                         .padding(.trailing, 15)
-                                        .frame(maxWidth: .infinity, alignment: .leading) // Ensure text stays within bounds
+                                        .frame(maxWidth: .infinity, alignment: .leading)
                                 }
                             }
                         }
                         .padding(.vertical, 5)
                         .background(day == Date() || isCheatDay(day) ? Color(UIColor.systemGroupedBackground) : Color.clear)
                         .cornerRadius(8)
-                        .id(day) // Assign an ID for scrolling purposes
+                        .id(day)
                     }
                 }
                 .padding(.horizontal)
             }
-            .navigationBarTitle(formattedDate(Date()), displayMode: .inline) // Display current date at the top
+            .navigationBarTitle(formattedDate(Date()), displayMode: .inline) // Match title style with Rewards and Battle History
         }
     }
     

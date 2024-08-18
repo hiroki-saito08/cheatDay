@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B067A54F2C697E1D009CE862 /* CheatDayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B067A54E2C697E1D009CE862 /* CheatDayApp.swift */; };
-		B067A5532C697E1D009CE862 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = B067A5522C697E1D009CE862 /* Item.swift */; };
 		B067A5552C697E20009CE862 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B067A5542C697E20009CE862 /* Assets.xcassets */; };
 		B067A5592C697E20009CE862 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B067A5582C697E20009CE862 /* Preview Assets.xcassets */; };
 		B067A5632C697E21009CE862 /* CheatDayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B067A5622C697E21009CE862 /* CheatDayTests.swift */; };
@@ -26,6 +25,18 @@
 		B079695B2C7195C8006DDB90 /* GoalGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B079695A2C7195C8006DDB90 /* GoalGraphView.swift */; };
 		B079695D2C7198B1006DDB90 /* CheatDayScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B079695C2C7198B1006DDB90 /* CheatDayScreen.swift */; };
 		B079695F2C7198CD006DDB90 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B079695E2C7198CD006DDB90 /* MainView.swift */; };
+		B079696C2C71C339006DDB90 /* Yomogi-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B07969672C71C338006DDB90 /* Yomogi-Regular.ttf */; };
+		B079696D2C71C339006DDB90 /* Yomogi-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B07969672C71C338006DDB90 /* Yomogi-Regular.ttf */; };
+		B079696E2C71C339006DDB90 /* Yomogi-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B07969672C71C338006DDB90 /* Yomogi-Regular.ttf */; };
+		B07969702C71C38B006DDB90 /* PatrickHand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B079696F2C71C38B006DDB90 /* PatrickHand-Regular.ttf */; };
+		B07969712C71C38B006DDB90 /* PatrickHand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B079696F2C71C38B006DDB90 /* PatrickHand-Regular.ttf */; };
+		B07969722C71C38B006DDB90 /* PatrickHand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B079696F2C71C38B006DDB90 /* PatrickHand-Regular.ttf */; };
+		B07969742C71C3D8006DDB90 /* CustomViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07969732C71C3D8006DDB90 /* CustomViewModifier.swift */; };
+		B07969752C71C3D8006DDB90 /* CustomViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07969732C71C3D8006DDB90 /* CustomViewModifier.swift */; };
+		B07969762C71C3D8006DDB90 /* CustomViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07969732C71C3D8006DDB90 /* CustomViewModifier.swift */; };
+		B07969782C71C690006DDB90 /* Font+CustomStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07969772C71C690006DDB90 /* Font+CustomStyles.swift */; };
+		B07969792C71C690006DDB90 /* Font+CustomStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07969772C71C690006DDB90 /* Font+CustomStyles.swift */; };
+		B079697A2C71C690006DDB90 /* Font+CustomStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07969772C71C690006DDB90 /* Font+CustomStyles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +59,6 @@
 /* Begin PBXFileReference section */
 		B067A54B2C697E1D009CE862 /* CheatDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheatDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B067A54E2C697E1D009CE862 /* CheatDayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheatDayApp.swift; sourceTree = "<group>"; };
-		B067A5522C697E1D009CE862 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		B067A5542C697E20009CE862 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B067A5562C697E20009CE862 /* CheatDay.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CheatDay.entitlements; sourceTree = "<group>"; };
 		B067A5582C697E20009CE862 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -70,6 +80,10 @@
 		B079695A2C7195C8006DDB90 /* GoalGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalGraphView.swift; sourceTree = "<group>"; };
 		B079695C2C7198B1006DDB90 /* CheatDayScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheatDayScreen.swift; sourceTree = "<group>"; };
 		B079695E2C7198CD006DDB90 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		B07969672C71C338006DDB90 /* Yomogi-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Yomogi-Regular.ttf"; sourceTree = "<group>"; };
+		B079696F2C71C38B006DDB90 /* PatrickHand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PatrickHand-Regular.ttf"; sourceTree = "<group>"; };
+		B07969732C71C3D8006DDB90 /* CustomViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewModifier.swift; sourceTree = "<group>"; };
+		B07969772C71C690006DDB90 /* Font+CustomStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+CustomStyles.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,9 +148,11 @@
 				B079695A2C7195C8006DDB90 /* GoalGraphView.swift */,
 				B06DFB5F2C6F2C6C00FCC272 /* Goal.swift */,
 				B06DFB612C6F330400FCC272 /* GoalData.swift */,
-				B067A5522C697E1D009CE862 /* Item.swift */,
+				B07969732C71C3D8006DDB90 /* CustomViewModifier.swift */,
+				B07969772C71C690006DDB90 /* Font+CustomStyles.swift */,
 				B067A5542C697E20009CE862 /* Assets.xcassets */,
 				B067A5562C697E20009CE862 /* CheatDay.entitlements */,
+				B07969682C71C338006DDB90 /* Font */,
 				B067A5572C697E20009CE862 /* Preview Content */,
 			);
 			path = CheatDay;
@@ -165,6 +181,15 @@
 				B067A56E2C697E21009CE862 /* CheatDayUITestsLaunchTests.swift */,
 			);
 			path = CheatDayUITests;
+			sourceTree = "<group>";
+		};
+		B07969682C71C338006DDB90 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				B079696F2C71C38B006DDB90 /* PatrickHand-Regular.ttf */,
+				B07969672C71C338006DDB90 /* Yomogi-Regular.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,10 +296,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B079696C2C71C339006DDB90 /* Yomogi-Regular.ttf in Resources */,
 				B067A5592C697E20009CE862 /* Preview Assets.xcassets in Resources */,
 				B067A5552C697E20009CE862 /* Assets.xcassets in Resources */,
 				B067A57F2C699F66009CE862 /* Readme.md in Resources */,
 				B067A57D2C699C25009CE862 /* GoogleService-Info.plist in Resources */,
+				B07969702C71C38B006DDB90 /* PatrickHand-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +309,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B079696D2C71C339006DDB90 /* Yomogi-Regular.ttf in Resources */,
+				B07969712C71C38B006DDB90 /* PatrickHand-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +318,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B079696E2C71C339006DDB90 /* Yomogi-Regular.ttf in Resources */,
+				B07969722C71C38B006DDB90 /* PatrickHand-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,11 +336,12 @@
 				B079695D2C7198B1006DDB90 /* CheatDayScreen.swift in Sources */,
 				B079695B2C7195C8006DDB90 /* GoalGraphView.swift in Sources */,
 				B06DFB602C6F2C6C00FCC272 /* Goal.swift in Sources */,
+				B07969742C71C3D8006DDB90 /* CustomViewModifier.swift in Sources */,
+				B07969782C71C690006DDB90 /* Font+CustomStyles.swift in Sources */,
 				B06DFB622C6F330400FCC272 /* GoalData.swift in Sources */,
 				B06DFB582C6F2C0900FCC272 /* GoalsView.swift in Sources */,
 				B06DFB5A2C6F2C1F00FCC272 /* PlansView.swift in Sources */,
 				B06DFB5E2C6F2C4300FCC272 /* BattleHistoryView.swift in Sources */,
-				B067A5532C697E1D009CE862 /* Item.swift in Sources */,
 				B067A54F2C697E1D009CE862 /* CheatDayApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,6 +350,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B07969792C71C690006DDB90 /* Font+CustomStyles.swift in Sources */,
+				B07969752C71C3D8006DDB90 /* CustomViewModifier.swift in Sources */,
 				B067A5632C697E21009CE862 /* CheatDayTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,8 +360,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B07969762C71C3D8006DDB90 /* CustomViewModifier.swift in Sources */,
 				B067A56F2C697E21009CE862 /* CheatDayUITestsLaunchTests.swift in Sources */,
 				B067A56D2C697E21009CE862 /* CheatDayUITests.swift in Sources */,
+				B079697A2C71C690006DDB90 /* Font+CustomStyles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
