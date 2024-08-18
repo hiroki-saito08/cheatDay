@@ -23,6 +23,9 @@
 		B06DFB5E2C6F2C4300FCC272 /* BattleHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06DFB5D2C6F2C4300FCC272 /* BattleHistoryView.swift */; };
 		B06DFB602C6F2C6C00FCC272 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06DFB5F2C6F2C6C00FCC272 /* Goal.swift */; };
 		B06DFB622C6F330400FCC272 /* GoalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06DFB612C6F330400FCC272 /* GoalData.swift */; };
+		B079695B2C7195C8006DDB90 /* GoalGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B079695A2C7195C8006DDB90 /* GoalGraphView.swift */; };
+		B079695D2C7198B1006DDB90 /* CheatDayScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B079695C2C7198B1006DDB90 /* CheatDayScreen.swift */; };
+		B079695F2C7198CD006DDB90 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B079695E2C7198CD006DDB90 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +67,9 @@
 		B06DFB5D2C6F2C4300FCC272 /* BattleHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleHistoryView.swift; sourceTree = "<group>"; };
 		B06DFB5F2C6F2C6C00FCC272 /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 		B06DFB612C6F330400FCC272 /* GoalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalData.swift; sourceTree = "<group>"; };
+		B079695A2C7195C8006DDB90 /* GoalGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalGraphView.swift; sourceTree = "<group>"; };
+		B079695C2C7198B1006DDB90 /* CheatDayScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheatDayScreen.swift; sourceTree = "<group>"; };
+		B079695E2C7198CD006DDB90 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,10 +125,13 @@
 				B067A57B2C6983AF009CE862 /* Info.plist */,
 				B067A54E2C697E1D009CE862 /* CheatDayApp.swift */,
 				B06DFB552C6F2BE700FCC272 /* ContentView.swift */,
+				B079695C2C7198B1006DDB90 /* CheatDayScreen.swift */,
+				B079695E2C7198CD006DDB90 /* MainView.swift */,
 				B06DFB572C6F2C0900FCC272 /* GoalsView.swift */,
 				B06DFB592C6F2C1F00FCC272 /* PlansView.swift */,
 				B06DFB5B2C6F2C3000FCC272 /* RewardsView.swift */,
 				B06DFB5D2C6F2C4300FCC272 /* BattleHistoryView.swift */,
+				B079695A2C7195C8006DDB90 /* GoalGraphView.swift */,
 				B06DFB5F2C6F2C6C00FCC272 /* Goal.swift */,
 				B06DFB612C6F330400FCC272 /* GoalData.swift */,
 				B067A5522C697E1D009CE862 /* Item.swift */,
@@ -291,7 +300,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B06DFB562C6F2BE700FCC272 /* ContentView.swift in Sources */,
+				B079695F2C7198CD006DDB90 /* MainView.swift in Sources */,
 				B06DFB5C2C6F2C3000FCC272 /* RewardsView.swift in Sources */,
+				B079695D2C7198B1006DDB90 /* CheatDayScreen.swift in Sources */,
+				B079695B2C7195C8006DDB90 /* GoalGraphView.swift in Sources */,
 				B06DFB602C6F2C6C00FCC272 /* Goal.swift in Sources */,
 				B06DFB622C6F330400FCC272 /* GoalData.swift in Sources */,
 				B06DFB582C6F2C0900FCC272 /* GoalsView.swift in Sources */,

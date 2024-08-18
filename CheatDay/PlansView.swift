@@ -14,38 +14,28 @@ struct PlansView: View {
                                 .padding(.top, 20)
                         }
                         VStack(alignment: .leading) {
-                            HStack {
-                                if isCheatDay(day) {
-                                    Text(dayHeader(for: day))
-                                        .font(.title)
-                                        .fontWeight(.bold)
-                                        .foregroundColor(.white)
-                                        .padding()
-                                        .background(RoundedRectangle(cornerRadius: 10).fill(Color.green))
-                                    Spacer()
-                                    if let goal = goalForDay(day) {
-                                        Text(daysUntil(day) == 0 ? "今日は \(goal.title) チートデイ" : "\(daysUntil(day)) 日後は \(goal.title) チートデイ")
-                                            .font(.subheadline)
-                                            .foregroundColor(.primary)
-                                            .multilineTextAlignment(.leading)
-                                            .padding(.leading, 15) // Increase padding for more margin
-                                            .padding(.trailing, 15) // Add trailing padding to prevent overflow
-                                            .lineLimit(nil) // Allow text to wrap to multiple lines
-                                            .frame(maxWidth: .infinity, alignment: .leading) // Ensure text stays within bounds
-                                    }
-                                } else if day == Date() {
-                                    Text(dayHeader(for: day))
-                                        .font(.headline.bold())
-                                        .foregroundColor(.red)
-                                        .textCase(.uppercase)
-                                    Spacer()
-                                } else {
-                                    Text(dayHeader(for: day))
-                                        .font(.subheadline)
-                                        .foregroundColor(.gray)
-                                        .padding(.leading, 20)
-                                        .padding(.top, 5)
-                                    Spacer()
+                            HStack(alignment: .center) { // Center the content vertically
+                                // Date and day of the week on the left, should not wrap
+                                Text(dayHeader(for: day))
+                                    .font(isCheatDay(day) ? .title : day == Date() ? .headline.bold() : .subheadline)
+                                    .foregroundColor(isCheatDay(day) ? .white : day == Date() ? .red : .gray)
+                                    .lineLimit(1) // Prevent wrapping
+                                    .padding()
+                                    .background(isCheatDay(day) ? Color.green : Color.clear)
+                                    .cornerRadius(10)
+                                
+                                Spacer()
+
+                                // Details on the right, should wrap, centered vertically, and larger font size
+                                if let goal = goalForDay(day) {
+                                    Text(daysUntil(day) == 0 ? "今日は \(goal.title) チートデイ" : "\(daysUntil(day)) 日後は \(goal.title) チートデイ")
+                                        .font(.title3) // Increased text size
+                                        .foregroundColor(.primary)
+                                        .multilineTextAlignment(.leading)
+                                        .lineLimit(nil) // Allow text to wrap to multiple lines
+                                        .padding(.leading, 15)
+                                        .padding(.trailing, 15)
+                                        .frame(maxWidth: .infinity, alignment: .leading) // Ensure text stays within bounds
                                 }
                             }
                         }
