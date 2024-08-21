@@ -1,66 +1,42 @@
-//
-//  ContentView.swift
-//  CheatDay
-//
-//  Created by 齊藤広樹 on 12/8/2024.
-//
-
 import SwiftUI
-import SwiftData
 
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
-
+    @State private var goals = [
+        Goal(
+            title: "読書の習慣をつける", // 15 characters
+            purpose: "毎月2冊読む", // 15 characters
+            reward: "新しい本を買う", // 15 characters
+            encouragement: "今日は素晴らしい進歩を遂げました！継続は力なり。", // 50 characters
+            cycleDays: 7,
+            nextCheatDay: Calendar.current.date(byAdding: .day, value: 7, to: Date()) ?? Date()
+        ),
+        Goal(
+            title: "映画鑑賞を楽しむ", // 15 characters
+            purpose: "週に1本見る", // 15 characters
+            reward: "お気に入りのスナックを食べる", // 15 characters
+            encouragement: "映画は心の栄養です。リラックスして楽しんでください。", // 50 characters
+            cycleDays: 14,
+            nextCheatDay: Calendar.current.date(byAdding: .day, value: 14, to: Date()) ?? Date()
+        ),
+        Goal(
+            title: "運動習慣を身につける", // 15 characters
+            purpose: "週3回の運動", // 15 characters
+            reward: "好きなデザートを食べる", // 15 characters
+            encouragement: "健康は一生の宝。今日も一歩前進しました！", // 50 characters
+            cycleDays: 21,
+            nextCheatDay: Calendar.current.date(byAdding: .day, value: 21, to: Date()) ?? Date()
+        )
+    ]
+    
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-                    }
-                }
-                .onDelete(perform: deleteItems)
-            }
-#if os(macOS)
-            .navigationSplitViewColumnWidth(min: 180, ideal: 200)
-#endif
-            .toolbar {
-#if os(iOS)
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-#endif
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-        } detail: {
-            Text("Select an item")
-        }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
-            }
-        }
+        MainView(goals: $goals)
+            .customFont(size: 20) // Apply the custom font modifier Yomogi-Regular font
+            .accentColor(.green) // Set a friendly accent color
     }
 }
 
-#Preview {
-    ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }
