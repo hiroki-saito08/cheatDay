@@ -19,7 +19,17 @@ struct BattleHistoryView: View {
                     }
                 }
             }
-            .navigationBarTitle("戦歴", displayMode: .inline)
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    VStack(spacing: 0) { // Reduce spacing under the title
+                        Text("戦歴")
+                            .font(.custom("Yomogi-Regular", size: 28)) // Use Yomogi-Regular and larger size
+                            .bold() // Make the title bold if needed
+                            .padding(.bottom, 0) // Reduce or remove padding
+                    }
+                }
+            }
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }

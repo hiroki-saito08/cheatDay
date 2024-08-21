@@ -6,21 +6,22 @@ struct CustomTabBarView: View {
     let titles: [String]
     
     var body: some View {
-        HStack {
+        HStack(spacing: 0) { // Remove spacing between items
             ForEach(0..<icons.count, id: \.self) { index in
-                Spacer()
-                VStack {
-                    Image(icons[index])
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 24, height: 24)
-                }
-                .padding(.vertical, 10)
-                .onTapGesture {
+                Button(action: {
                     selectedTab = index
+                }) {
+                    VStack {
+                        Image(icons[index])
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 24, height: 24)
+                    }
+                    .padding(.vertical, 10)
+                    .frame(maxWidth: .infinity) // Ensure each item takes up equal space
+                    .background(selectedTab == index ? Color.green.opacity(0.2) : Color.clear)
+                    .foregroundColor(selectedTab == index ? .green : .gray)
                 }
-                .foregroundColor(selectedTab == index ? .green : .gray)
-                Spacer()
             }
         }
         .background(Color.white)
