@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		B00068352C75BAE900BE9445 /* GoalFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00068342C75BAE900BE9445 /* GoalFormView.swift */; };
+		B00068372C75CCE200BE9445 /* FAQView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00068362C75CCE200BE9445 /* FAQView.swift */; };
+		B00068392C75CCEE00BE9445 /* ContactSupportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00068382C75CCEE00BE9445 /* ContactSupportView.swift */; };
+		B000683B2C75CDD400BE9445 /* PrivacyPolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B000683A2C75CDD400BE9445 /* PrivacyPolicyView.swift */; };
+		B000683D2C75CDE800BE9445 /* TermsOfServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B000683C2C75CDE800BE9445 /* TermsOfServiceView.swift */; };
+		B000683F2C75CE0600BE9445 /* OpenSourceLicensesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B000683E2C75CE0600BE9445 /* OpenSourceLicensesView.swift */; };
+		B00068412C75CE2E00BE9445 /* SendFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00068402C75CE2E00BE9445 /* SendFeedbackView.swift */; };
+		B00068432C75CE5100BE9445 /* DataUsageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00068422C75CE5100BE9445 /* DataUsageView.swift */; };
 		B067A54F2C697E1D009CE862 /* CheatDayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B067A54E2C697E1D009CE862 /* CheatDayApp.swift */; };
 		B067A5552C697E20009CE862 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B067A5542C697E20009CE862 /* Assets.xcassets */; };
 		B067A5592C697E20009CE862 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B067A5582C697E20009CE862 /* Preview Assets.xcassets */; };
@@ -61,6 +68,13 @@
 
 /* Begin PBXFileReference section */
 		B00068342C75BAE900BE9445 /* GoalFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalFormView.swift; sourceTree = "<group>"; };
+		B00068362C75CCE200BE9445 /* FAQView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQView.swift; sourceTree = "<group>"; };
+		B00068382C75CCEE00BE9445 /* ContactSupportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactSupportView.swift; sourceTree = "<group>"; };
+		B000683A2C75CDD400BE9445 /* PrivacyPolicyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyView.swift; sourceTree = "<group>"; };
+		B000683C2C75CDE800BE9445 /* TermsOfServiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfServiceView.swift; sourceTree = "<group>"; };
+		B000683E2C75CE0600BE9445 /* OpenSourceLicensesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceLicensesView.swift; sourceTree = "<group>"; };
+		B00068402C75CE2E00BE9445 /* SendFeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFeedbackView.swift; sourceTree = "<group>"; };
+		B00068422C75CE5100BE9445 /* DataUsageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUsageView.swift; sourceTree = "<group>"; };
 		B067A54B2C697E1D009CE862 /* CheatDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheatDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B067A54E2C697E1D009CE862 /* CheatDayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheatDayApp.swift; sourceTree = "<group>"; };
 		B067A5542C697E20009CE862 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -153,6 +167,13 @@
 				B06DFB5D2C6F2C4300FCC272 /* BattleHistoryView.swift */,
 				B079695A2C7195C8006DDB90 /* GoalGraphView.swift */,
 				B0DA98312C75664B000D31FF /* SettingsView.swift */,
+				B00068422C75CE5100BE9445 /* DataUsageView.swift */,
+				B00068402C75CE2E00BE9445 /* SendFeedbackView.swift */,
+				B000683C2C75CDE800BE9445 /* TermsOfServiceView.swift */,
+				B000683E2C75CE0600BE9445 /* OpenSourceLicensesView.swift */,
+				B000683A2C75CDD400BE9445 /* PrivacyPolicyView.swift */,
+				B00068382C75CCEE00BE9445 /* ContactSupportView.swift */,
+				B00068362C75CCE200BE9445 /* FAQView.swift */,
 				B0DA98332C756E1E000D31FF /* CustomTabBarView.swift */,
 				B00068342C75BAE900BE9445 /* GoalFormView.swift */,
 				B06DFB5F2C6F2C6C00FCC272 /* Goal.swift */,
@@ -345,15 +366,22 @@
 				B079695D2C7198B1006DDB90 /* CheatDayScreen.swift in Sources */,
 				B079695B2C7195C8006DDB90 /* GoalGraphView.swift in Sources */,
 				B06DFB602C6F2C6C00FCC272 /* Goal.swift in Sources */,
+				B00068372C75CCE200BE9445 /* FAQView.swift in Sources */,
+				B00068392C75CCEE00BE9445 /* ContactSupportView.swift in Sources */,
 				B0DA98342C756E1E000D31FF /* CustomTabBarView.swift in Sources */,
 				B07969742C71C3D8006DDB90 /* CustomViewModifier.swift in Sources */,
 				B0DA98322C75664B000D31FF /* SettingsView.swift in Sources */,
 				B07969782C71C690006DDB90 /* Font+CustomStyles.swift in Sources */,
+				B000683F2C75CE0600BE9445 /* OpenSourceLicensesView.swift in Sources */,
 				B06DFB622C6F330400FCC272 /* GoalData.swift in Sources */,
+				B00068432C75CE5100BE9445 /* DataUsageView.swift in Sources */,
 				B06DFB582C6F2C0900FCC272 /* GoalsView.swift in Sources */,
+				B00068412C75CE2E00BE9445 /* SendFeedbackView.swift in Sources */,
 				B06DFB5A2C6F2C1F00FCC272 /* PlansView.swift in Sources */,
+				B000683D2C75CDE800BE9445 /* TermsOfServiceView.swift in Sources */,
 				B06DFB5E2C6F2C4300FCC272 /* BattleHistoryView.swift in Sources */,
 				B067A54F2C697E1D009CE862 /* CheatDayApp.swift in Sources */,
+				B000683B2C75CDD400BE9445 /* PrivacyPolicyView.swift in Sources */,
 				B00068352C75BAE900BE9445 /* GoalFormView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
