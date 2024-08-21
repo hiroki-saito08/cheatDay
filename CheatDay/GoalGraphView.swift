@@ -6,10 +6,6 @@ struct GoalGraphView: View {
     
     var body: some View {
         VStack {
-            Text("\(goal.title) 戦歴")
-                .font(.largeTitle)
-                .padding()
-            
             LineChart(goal: goal)
                 .frame(height: 300)
                 .padding()

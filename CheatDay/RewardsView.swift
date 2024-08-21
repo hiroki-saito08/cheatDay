@@ -17,9 +17,20 @@ struct RewardsView: View {
                            if isCheatDay(for: goal) {
                                HStack {
                                    Spacer()
-                                   Text("⭐️ がんばったね！ ⭐️")
-                                       .font(.yomogiTitle())
-                                       .foregroundColor(.yellow)
+                                   HStack(spacing: 5) {
+                                       Image("star_color") // Your star image
+                                           .resizable()
+                                           .frame(width: 24, height: 24) // Adjust size as needed
+                                           .rotationEffect(.degrees(15)) // Tilt the star 15 degrees to the right
+                                       Text("がんばったね！")
+                                           .font(.yomogiTitle())
+                                           .foregroundColor(Color(red: 0.85, green: 0.65, blue: 0.0)) // Darker yellow
+                                           .fontWeight(.bold) // Make the text bold
+                                       Image("star_color") // Your star image
+                                           .resizable()
+                                           .frame(width: 24, height: 24) // Adjust size as needed
+                                           .rotationEffect(.degrees(15)) // Tilt the star 15 degrees to the right
+                                   }
                                    Spacer()
                                }
                                Text(goal.reward)
