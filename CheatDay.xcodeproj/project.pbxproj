@@ -16,6 +16,7 @@
 		B00068412C75CE2E00BE9445 /* SendFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00068402C75CE2E00BE9445 /* SendFeedbackView.swift */; };
 		B00068452C75D8C000BE9445 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00068442C75D8C000BE9445 /* MailView.swift */; };
 		B00068472C75DA6B00BE9445 /* ClearCacheView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00068462C75DA6B00BE9445 /* ClearCacheView.swift */; };
+		B000684F2C75DDEB00BE9445 /* HandwrittenGoalModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B000684E2C75DDEB00BE9445 /* HandwrittenGoalModifier.swift */; };
 		B067A54F2C697E1D009CE862 /* CheatDayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B067A54E2C697E1D009CE862 /* CheatDayApp.swift */; };
 		B067A5552C697E20009CE862 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B067A5542C697E20009CE862 /* Assets.xcassets */; };
 		B067A5592C697E20009CE862 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B067A5582C697E20009CE862 /* Preview Assets.xcassets */; };
@@ -77,6 +78,7 @@
 		B00068402C75CE2E00BE9445 /* SendFeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFeedbackView.swift; sourceTree = "<group>"; };
 		B00068442C75D8C000BE9445 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		B00068462C75DA6B00BE9445 /* ClearCacheView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearCacheView.swift; sourceTree = "<group>"; };
+		B000684E2C75DDEB00BE9445 /* HandwrittenGoalModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandwrittenGoalModifier.swift; sourceTree = "<group>"; };
 		B067A54B2C697E1D009CE862 /* CheatDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheatDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B067A54E2C697E1D009CE862 /* CheatDayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheatDayApp.swift; sourceTree = "<group>"; };
 		B067A5542C697E20009CE862 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				B00068342C75BAE900BE9445 /* GoalFormView.swift */,
 				B06DFB5F2C6F2C6C00FCC272 /* Goal.swift */,
 				B06DFB612C6F330400FCC272 /* GoalData.swift */,
+				B000684E2C75DDEB00BE9445 /* HandwrittenGoalModifier.swift */,
 				B07969732C71C3D8006DDB90 /* CustomViewModifier.swift */,
 				B07969772C71C690006DDB90 /* Font+CustomStyles.swift */,
 				B067A5542C697E20009CE862 /* Assets.xcassets */,
@@ -371,6 +374,7 @@
 				B00068472C75DA6B00BE9445 /* ClearCacheView.swift in Sources */,
 				B06DFB602C6F2C6C00FCC272 /* Goal.swift in Sources */,
 				B00068372C75CCE200BE9445 /* FAQView.swift in Sources */,
+				B000684F2C75DDEB00BE9445 /* HandwrittenGoalModifier.swift in Sources */,
 				B00068452C75D8C000BE9445 /* MailView.swift in Sources */,
 				B00068392C75CCEE00BE9445 /* ContactSupportView.swift in Sources */,
 				B0DA98342C756E1E000D31FF /* CustomTabBarView.swift in Sources */,
