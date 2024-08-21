@@ -4,6 +4,7 @@ struct GoalsView: View {
     @Binding var goals: [Goal]
     @State private var showGoalForm = false
     @State private var editingGoal: Goal? = nil
+    @State private var showSettings = false
     
     var body: some View {
         NavigationView {
@@ -53,18 +54,31 @@ struct GoalsView: View {
                 }
             }
             .navigationBarTitle("目標", displayMode: .inline) // Match title style with Rewards and Battle History
-            .navigationBarItems(trailing: Button(action: {
-                editingGoal = nil
-                showGoalForm = true
-            }) {
-                HStack {
+            .navigationBarItems(
+                leading: Button(action: {
+                    showSettings.toggle()
+                }) {
+                    Image(systemName: "gearshape")
+                        .foregroundColor(.black)
+                        .imageScale(.large)
+                },
+                trailing: HStack {
                     Image(systemName: "plus")
+                        .foregroundColor(.black)
                     Text("\(3 - goals.count)")
+                        .foregroundColor(.black)
                 }
-            }
-            .disabled(goals.count >= 3))
+                .onTapGesture {
+                    editingGoal = nil
+                    showGoalForm = true
+                }
+                .disabled(goals.count >= 3)
+            )
             .sheet(isPresented: $showGoalForm) {
                 GoalFormView(goals: $goals, editingGoal: $editingGoal)
+            }
+            .sheet(isPresented: $showSettings) {
+                SettingsView() // Your SettingsView implementation
             }
         }
     }

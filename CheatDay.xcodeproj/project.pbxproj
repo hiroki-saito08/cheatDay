@@ -37,6 +37,8 @@
 		B07969782C71C690006DDB90 /* Font+CustomStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07969772C71C690006DDB90 /* Font+CustomStyles.swift */; };
 		B07969792C71C690006DDB90 /* Font+CustomStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07969772C71C690006DDB90 /* Font+CustomStyles.swift */; };
 		B079697A2C71C690006DDB90 /* Font+CustomStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07969772C71C690006DDB90 /* Font+CustomStyles.swift */; };
+		B0DA98322C75664B000D31FF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DA98312C75664B000D31FF /* SettingsView.swift */; };
+		B0DA98342C756E1E000D31FF /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DA98332C756E1E000D31FF /* CustomTabBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,8 @@
 		B079696F2C71C38B006DDB90 /* PatrickHand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PatrickHand-Regular.ttf"; sourceTree = "<group>"; };
 		B07969732C71C3D8006DDB90 /* CustomViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewModifier.swift; sourceTree = "<group>"; };
 		B07969772C71C690006DDB90 /* Font+CustomStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+CustomStyles.swift"; sourceTree = "<group>"; };
+		B0DA98312C75664B000D31FF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		B0DA98332C756E1E000D31FF /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +150,8 @@
 				B06DFB5B2C6F2C3000FCC272 /* RewardsView.swift */,
 				B06DFB5D2C6F2C4300FCC272 /* BattleHistoryView.swift */,
 				B079695A2C7195C8006DDB90 /* GoalGraphView.swift */,
+				B0DA98312C75664B000D31FF /* SettingsView.swift */,
+				B0DA98332C756E1E000D31FF /* CustomTabBarView.swift */,
 				B06DFB5F2C6F2C6C00FCC272 /* Goal.swift */,
 				B06DFB612C6F330400FCC272 /* GoalData.swift */,
 				B07969732C71C3D8006DDB90 /* CustomViewModifier.swift */,
@@ -336,7 +342,9 @@
 				B079695D2C7198B1006DDB90 /* CheatDayScreen.swift in Sources */,
 				B079695B2C7195C8006DDB90 /* GoalGraphView.swift in Sources */,
 				B06DFB602C6F2C6C00FCC272 /* Goal.swift in Sources */,
+				B0DA98342C756E1E000D31FF /* CustomTabBarView.swift in Sources */,
 				B07969742C71C3D8006DDB90 /* CustomViewModifier.swift in Sources */,
+				B0DA98322C75664B000D31FF /* SettingsView.swift in Sources */,
 				B07969782C71C690006DDB90 /* Font+CustomStyles.swift in Sources */,
 				B06DFB622C6F330400FCC272 /* GoalData.swift in Sources */,
 				B06DFB582C6F2C0900FCC272 /* GoalsView.swift in Sources */,

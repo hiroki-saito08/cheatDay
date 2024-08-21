@@ -5,46 +5,44 @@ struct MainView: View {
     @State private var cheatDayGoal: Goal?
     @Binding var goals: [Goal]
     @State private var selectedTab: Int = 0
+    @State private var showSettings = false // State to show the settings menu
     
     var body: some View {
-        Group {
-            if let goalIndex = goals.firstIndex(where: { $0.id == cheatDayGoal?.id }), showCheatDayScreen {
-                CheatDayScreen(goal: $goals[goalIndex], isPresented: $showCheatDayScreen)
-                    .onDisappear {
-                        // Redirect to the Rewards page after closing CheatDayScreen
-                        selectedTab = 2 // Assuming the Rewards tab is the third tab
+        NavigationView {
+            VStack {
+                Group {
+                    if let goalIndex = goals.firstIndex(where: { $0.id == cheatDayGoal?.id }), showCheatDayScreen {
+                        CheatDayScreen(goal: $goals[goalIndex], isPresented: $showCheatDayScreen)
+                            .onDisappear {
+                                selectedTab = 2 // Assuming the Rewards tab is the third tab
+                            }
+                    } else {
+                        // Content of the selected tab
+                        if selectedTab == 0 {
+                            GoalsView(goals: $goals)
+                        } else if selectedTab == 1 {
+                            PlansView(goals: $goals)
+                        } else if selectedTab == 2 {
+                            RewardsView(goals: $goals)
+                        } else if selectedTab == 3 {
+                            BattleHistoryView(goals: $goals)
+                        }
                     }
-            } else {
-                // Regular content with TabView
-                TabView(selection: $selectedTab) {
-                    GoalsView(goals: $goals)
-                        .tabItem {
-                            Label("目標", systemImage: "target")
-                        }
-                        .tag(0)
-                    
-                    PlansView(goals: $goals)
-                        .tabItem {
-                            Label("予定", systemImage: "calendar")
-                        }
-                        .tag(1)
-                    
-                    RewardsView(goals: $goals)
-                        .tabItem {
-                            Label("褒美", systemImage: "gift")
-                        }
-                        .tag(2)
-                    
-                    BattleHistoryView(goals: $goals)
-                        .tabItem {
-                            Label("戦歴", systemImage: "chart.line.uptrend.xyaxis")
-                        }
-                        .tag(3)
                 }
+                
+                // Custom Tab Bar
+                CustomTabBarView(
+                    selectedTab: $selectedTab,
+                    icons: ["notebook", "date", "gift", "curved-arrow"],
+                    titles: ["目標", "予定", "褒美", "戦歴"]
+                )
             }
-        }
-        .onAppear {
-            checkForCheatDay()
+            .sheet(isPresented: $showSettings) {
+                SettingsView() // Show the settings screen
+            }
+            .onAppear {
+                checkForCheatDay()
+            }
         }
     }
     
@@ -52,22 +50,15 @@ struct MainView: View {
         let today = Date()
         let calendar = Calendar.current
 
-        // Re-enable the check to see if the CheatDayScreen was already shown today
         if let lastShownDate = UserDefaults.standard.object(forKey: "LastCheatDayScreenShownDate") as? Date,
            calendar.isDate(lastShownDate, inSameDayAs: today) {
-            print("CheatDayScreen was already shown today.")
             return
         }
         
-        // Check if today is a cheat day for any goal
         if let goal = goals.first(where: { Calendar.current.isDate($0.nextCheatDay, inSameDayAs: today) }) {
-            print("Today is a cheat day for goal: \(goal.title)")
             cheatDayGoal = goal
             showCheatDayScreen = true
-            // Set the current date in UserDefaults to prevent showing it again today
             UserDefaults.standard.set(today, forKey: "LastCheatDayScreenShownDate")
         }
     }
-
-
 }
