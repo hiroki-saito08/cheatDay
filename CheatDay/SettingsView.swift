@@ -57,15 +57,8 @@ struct SettingsView: View {
                 }
                 
                 // Storage & Data
-                Section(header: Text("ストレージとデータ")) {
-                    Button(action: {
-                        clearCache()
-                    }) {
-                        Text("キャッシュをクリアする")
-                    }
-                    NavigationLink(destination: DataUsageView()) {
-                        Text("データ使用量")
-                    }
+                NavigationLink(destination: ClearCacheView()) {
+                    Text("キャッシュ管理")
                 }
                 
                 // 11. Copyright Information
