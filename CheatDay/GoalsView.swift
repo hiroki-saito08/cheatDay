@@ -6,9 +6,22 @@ struct GoalsView: View {
     @State private var editingGoal: Goal? = nil
     @State private var showSettings = false
     
+    // State to manage the delete confirmation alert
+    @State private var showDeleteConfirmation = false
+    @State private var goalToDelete: Goal? = nil
+    
+    // Daily Quote
+    @State private var dailyQuote: String = ""
+    
     var body: some View {
         NavigationView {
-            VStack(spacing: 0) { // Set spacing to 0 to reduce vertical space
+            VStack(spacing: 0) {
+                Text(dailyQuote)
+                    .font(.yomogiSubheadline())
+                    .foregroundColor(.gray)
+                    .padding()
+                    .multilineTextAlignment(.center)
+                
                 if goals.isEmpty {
                     Text("目標を登録してください！")
                         .font(.yomogiTitle())
@@ -17,31 +30,31 @@ struct GoalsView: View {
                 } else {
                     List {
                         ForEach(goals) { goal in
-                            VStack(alignment: .leading, spacing: 8) { // Added spacing between lines
+                            VStack(alignment: .leading, spacing: 8) {
                                 Text(goal.title)
                                     .font(.yomogiHeadline().bold())
-                                    .padding(.bottom, 2) // Additional spacing
+                                    .padding(.bottom, 2)
                                 Text("目的: \(goal.purpose)")
                                     .font(.yomogiBody())
-                                    .padding(.bottom, 2) // Additional spacing
+                                    .padding(.bottom, 2)
                                 HStack {
                                     Text("次のチートデイ: ")
                                         .font(.yomogiBody())
                                     Text("\(formattedDate(goal.nextCheatDay))")
                                         .font(.yomogiBody())
-                                        .underline() // Underline only the date
+                                        .underline()
                                 }
-                                .padding(.bottom, 2) // Additional spacing
+                                .padding(.bottom, 2)
                                 Text("サイクル: \(goal.cycleDays) 日ごと")
                                     .font(.yomogiBody())
-                                    .padding(.bottom, 2) // Additional spacing
+                                    .padding(.bottom, 2)
                                 if let encouragement = goal.encouragement, !encouragement.isEmpty {
                                     Text("励ましの言葉: \(encouragement)")
-                                        .font(.yomogiSubheadline()) // Normal text color
-                                        .padding(.bottom, 2) // Additional spacing
+                                        .font(.yomogiSubheadline())
+                                        .padding(.bottom, 2)
                                 }
                             }
-                            .padding(.vertical, 4) // Additional padding between goal entries
+                            .padding(.vertical, 4)
                             .contextMenu {
                                 Button(action: {
                                     editingGoal = goal
@@ -51,24 +64,24 @@ struct GoalsView: View {
                                     Image(systemName: "pencil")
                                 }
                                 Button(role: .destructive, action: {
-                                    deleteGoal(goal)
+                                    goalToDelete = goal
+                                    showDeleteConfirmation = true
                                 }) {
                                     Text("削除")
                                     Image(systemName: "trash")
                                 }
                             }
                         }
-                        .onDelete(perform: delete)
                     }
                 }
             }
             .toolbar {
                 ToolbarItem(placement: .principal) {
-                    VStack(spacing: 0) { // Reduce spacing under the title
+                    VStack(spacing: 0) {
                         Text("目標")
-                            .font(.custom("Yomogi-Regular", size: 28)) // Use Yomogi-Regular and larger size
-                            .bold() // Make the title bold if needed
-                            .padding(.bottom, 0) // Reduce or remove padding
+                            .font(.custom("Yomogi-Regular", size: 28))
+                            .bold()
+                            .padding(.bottom, 0)
                     }
                 }
                 ToolbarItem(placement: .navigationBarLeading) {
@@ -85,7 +98,7 @@ struct GoalsView: View {
                         Image(systemName: "plus")
                             .foregroundColor(.black)
                         Text("\(3 - goals.count)")
-                            .font(.title2) // Increase font size
+                            .font(.title2)
                             .foregroundColor(.black)
                     }
                     .onTapGesture {
@@ -99,14 +112,25 @@ struct GoalsView: View {
                 GoalFormView(goals: $goals, editingGoal: $editingGoal)
             }
             .sheet(isPresented: $showSettings) {
-                SettingsView() // Your SettingsView implementation
+                SettingsView()
             }
-            .navigationBarTitleDisplayMode(.inline) // Make sure title is inline to reduce spacing
+            .navigationBarTitleDisplayMode(.inline)
+            .alert(isPresented: $showDeleteConfirmation) {
+                Alert(
+                    title: Text("目標を削除しますか？"),
+                    message: Text("この操作は取り消せません。"),
+                    primaryButton: .destructive(Text("削除")) {
+                        if let goal = goalToDelete {
+                            deleteGoal(goal)
+                        }
+                    },
+                    secondaryButton: .cancel()
+                )
+            }
+            .onAppear {
+                dailyQuote = DailyQuotes.getDailyQuote() // Fetch a daily quote
+            }
         }
-    }
-    
-    func delete(at offsets: IndexSet) {
-        goals.remove(atOffsets: offsets)
     }
     
     func deleteGoal(_ goal: Goal) {
@@ -114,10 +138,16 @@ struct GoalsView: View {
             goals.remove(at: index)
         }
     }
-    
+
     func formattedDate(_ date: Date) -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "M月d日" // Japanese month and day format
         return formatter.string(from: date)
+    }
+}
+
+struct GoalsView_Previews: PreviewProvider {
+    static var previews: some View {
+        GoalsView(goals: .constant([]))
     }
 }

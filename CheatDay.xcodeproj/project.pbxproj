@@ -17,6 +17,8 @@
 		B00068452C75D8C000BE9445 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00068442C75D8C000BE9445 /* MailView.swift */; };
 		B00068472C75DA6B00BE9445 /* ClearCacheView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00068462C75DA6B00BE9445 /* ClearCacheView.swift */; };
 		B000684F2C75DDEB00BE9445 /* HandwrittenGoalModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B000684E2C75DDEB00BE9445 /* HandwrittenGoalModifier.swift */; };
+		B00FB65F2C7AC3C600629C8F /* AffiliateAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB65E2C7AC3C600629C8F /* AffiliateAd.swift */; };
+		B00FB6612C7AC44D00629C8F /* AdsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB6602C7AC44D00629C8F /* AdsView.swift */; };
 		B067A54F2C697E1D009CE862 /* CheatDayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B067A54E2C697E1D009CE862 /* CheatDayApp.swift */; };
 		B067A5552C697E20009CE862 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B067A5542C697E20009CE862 /* Assets.xcassets */; };
 		B067A5592C697E20009CE862 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B067A5582C697E20009CE862 /* Preview Assets.xcassets */; };
@@ -49,6 +51,15 @@
 		B079697A2C71C690006DDB90 /* Font+CustomStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07969772C71C690006DDB90 /* Font+CustomStyles.swift */; };
 		B0DA98322C75664B000D31FF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DA98312C75664B000D31FF /* SettingsView.swift */; };
 		B0DA98342C756E1E000D31FF /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DA98332C756E1E000D31FF /* CustomTabBarView.swift */; };
+		B0EBADD32C7D3342004F99B7 /* CheatDay_Machine Learning.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B0EBADD22C7D3342004F99B7 /* CheatDay_Machine Learning.mlmodel */; };
+		B0EBADD42C7D3342004F99B7 /* CheatDay_Machine Learning.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B0EBADD22C7D3342004F99B7 /* CheatDay_Machine Learning.mlmodel */; };
+		B0EBADD52C7D3342004F99B7 /* CheatDay_Machine Learning.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B0EBADD22C7D3342004F99B7 /* CheatDay_Machine Learning.mlmodel */; };
+		B0EBADD72C7D372D004F99B7 /* ModelIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EBADD62C7D372D004F99B7 /* ModelIntegration.swift */; };
+		B0EBADD82C7D372D004F99B7 /* ModelIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EBADD62C7D372D004F99B7 /* ModelIntegration.swift */; };
+		B0EBADD92C7D372D004F99B7 /* ModelIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EBADD62C7D372D004F99B7 /* ModelIntegration.swift */; };
+		B0EBADDB2C7D4A61004F99B7 /* DailyQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EBADDA2C7D4A61004F99B7 /* DailyQuotes.swift */; };
+		B0EBADDC2C7D4A61004F99B7 /* DailyQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EBADDA2C7D4A61004F99B7 /* DailyQuotes.swift */; };
+		B0EBADDD2C7D4A61004F99B7 /* DailyQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EBADDA2C7D4A61004F99B7 /* DailyQuotes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +90,8 @@
 		B00068442C75D8C000BE9445 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		B00068462C75DA6B00BE9445 /* ClearCacheView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearCacheView.swift; sourceTree = "<group>"; };
 		B000684E2C75DDEB00BE9445 /* HandwrittenGoalModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandwrittenGoalModifier.swift; sourceTree = "<group>"; };
+		B00FB65E2C7AC3C600629C8F /* AffiliateAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffiliateAd.swift; sourceTree = "<group>"; };
+		B00FB6602C7AC44D00629C8F /* AdsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsView.swift; sourceTree = "<group>"; };
 		B067A54B2C697E1D009CE862 /* CheatDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheatDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B067A54E2C697E1D009CE862 /* CheatDayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheatDayApp.swift; sourceTree = "<group>"; };
 		B067A5542C697E20009CE862 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -108,6 +121,9 @@
 		B07969772C71C690006DDB90 /* Font+CustomStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+CustomStyles.swift"; sourceTree = "<group>"; };
 		B0DA98312C75664B000D31FF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		B0DA98332C756E1E000D31FF /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
+		B0EBADD22C7D3342004F99B7 /* CheatDay_Machine Learning.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "CheatDay_Machine Learning.mlmodel"; sourceTree = SOURCE_ROOT; };
+		B0EBADD62C7D372D004F99B7 /* ModelIntegration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelIntegration.swift; sourceTree = "<group>"; };
+		B0EBADDA2C7D4A61004F99B7 /* DailyQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuotes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +175,7 @@
 		B067A54D2C697E1D009CE862 /* CheatDay */ = {
 			isa = PBXGroup;
 			children = (
+				B0EBADD22C7D3342004F99B7 /* CheatDay_Machine Learning.mlmodel */,
 				B067A57C2C699C25009CE862 /* GoogleService-Info.plist */,
 				B067A57B2C6983AF009CE862 /* Info.plist */,
 				B067A54E2C697E1D009CE862 /* CheatDayApp.swift */,
@@ -177,6 +194,9 @@
 				B000683E2C75CE0600BE9445 /* OpenSourceLicensesView.swift */,
 				B000683A2C75CDD400BE9445 /* PrivacyPolicyView.swift */,
 				B00068382C75CCEE00BE9445 /* ContactSupportView.swift */,
+				B00FB65E2C7AC3C600629C8F /* AffiliateAd.swift */,
+				B00FB6602C7AC44D00629C8F /* AdsView.swift */,
+				B0EBADD62C7D372D004F99B7 /* ModelIntegration.swift */,
 				B00068442C75D8C000BE9445 /* MailView.swift */,
 				B00068362C75CCE200BE9445 /* FAQView.swift */,
 				B0DA98332C756E1E000D31FF /* CustomTabBarView.swift */,
@@ -185,6 +205,7 @@
 				B06DFB612C6F330400FCC272 /* GoalData.swift */,
 				B000684E2C75DDEB00BE9445 /* HandwrittenGoalModifier.swift */,
 				B07969732C71C3D8006DDB90 /* CustomViewModifier.swift */,
+				B0EBADDA2C7D4A61004F99B7 /* DailyQuotes.swift */,
 				B07969772C71C690006DDB90 /* Font+CustomStyles.swift */,
 				B067A5542C697E20009CE862 /* Assets.xcassets */,
 				B067A5562C697E20009CE862 /* CheatDay.entitlements */,
@@ -368,6 +389,7 @@
 			files = (
 				B06DFB562C6F2BE700FCC272 /* ContentView.swift in Sources */,
 				B079695F2C7198CD006DDB90 /* MainView.swift in Sources */,
+				B0EBADD72C7D372D004F99B7 /* ModelIntegration.swift in Sources */,
 				B06DFB5C2C6F2C3000FCC272 /* RewardsView.swift in Sources */,
 				B079695D2C7198B1006DDB90 /* CheatDayScreen.swift in Sources */,
 				B079695B2C7195C8006DDB90 /* GoalGraphView.swift in Sources */,
@@ -375,12 +397,15 @@
 				B06DFB602C6F2C6C00FCC272 /* Goal.swift in Sources */,
 				B00068372C75CCE200BE9445 /* FAQView.swift in Sources */,
 				B000684F2C75DDEB00BE9445 /* HandwrittenGoalModifier.swift in Sources */,
+				B00FB6612C7AC44D00629C8F /* AdsView.swift in Sources */,
 				B00068452C75D8C000BE9445 /* MailView.swift in Sources */,
+				B00FB65F2C7AC3C600629C8F /* AffiliateAd.swift in Sources */,
 				B00068392C75CCEE00BE9445 /* ContactSupportView.swift in Sources */,
 				B0DA98342C756E1E000D31FF /* CustomTabBarView.swift in Sources */,
 				B07969742C71C3D8006DDB90 /* CustomViewModifier.swift in Sources */,
 				B0DA98322C75664B000D31FF /* SettingsView.swift in Sources */,
 				B07969782C71C690006DDB90 /* Font+CustomStyles.swift in Sources */,
+				B0EBADDB2C7D4A61004F99B7 /* DailyQuotes.swift in Sources */,
 				B000683F2C75CE0600BE9445 /* OpenSourceLicensesView.swift in Sources */,
 				B06DFB622C6F330400FCC272 /* GoalData.swift in Sources */,
 				B06DFB582C6F2C0900FCC272 /* GoalsView.swift in Sources */,
@@ -388,6 +413,7 @@
 				B06DFB5A2C6F2C1F00FCC272 /* PlansView.swift in Sources */,
 				B000683D2C75CDE800BE9445 /* TermsOfServiceView.swift in Sources */,
 				B06DFB5E2C6F2C4300FCC272 /* BattleHistoryView.swift in Sources */,
+				B0EBADD32C7D3342004F99B7 /* CheatDay_Machine Learning.mlmodel in Sources */,
 				B067A54F2C697E1D009CE862 /* CheatDayApp.swift in Sources */,
 				B000683B2C75CDD400BE9445 /* PrivacyPolicyView.swift in Sources */,
 				B00068352C75BAE900BE9445 /* GoalFormView.swift in Sources */,
@@ -398,6 +424,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0EBADDC2C7D4A61004F99B7 /* DailyQuotes.swift in Sources */,
+				B0EBADD42C7D3342004F99B7 /* CheatDay_Machine Learning.mlmodel in Sources */,
+				B0EBADD82C7D372D004F99B7 /* ModelIntegration.swift in Sources */,
 				B07969792C71C690006DDB90 /* Font+CustomStyles.swift in Sources */,
 				B07969752C71C3D8006DDB90 /* CustomViewModifier.swift in Sources */,
 				B067A5632C697E21009CE862 /* CheatDayTests.swift in Sources */,
@@ -409,9 +438,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B07969762C71C3D8006DDB90 /* CustomViewModifier.swift in Sources */,
+				B0EBADD92C7D372D004F99B7 /* ModelIntegration.swift in Sources */,
+				B0EBADD52C7D3342004F99B7 /* CheatDay_Machine Learning.mlmodel in Sources */,
 				B067A56F2C697E21009CE862 /* CheatDayUITestsLaunchTests.swift in Sources */,
 				B067A56D2C697E21009CE862 /* CheatDayUITests.swift in Sources */,
 				B079697A2C71C690006DDB90 /* Font+CustomStyles.swift in Sources */,
+				B0EBADDD2C7D4A61004F99B7 /* DailyQuotes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

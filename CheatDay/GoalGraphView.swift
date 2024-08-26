@@ -6,6 +6,15 @@ struct GoalGraphView: View {
     
     var body: some View {
         VStack {
+            Text("\(goal.title) の戦歴")
+                .font(.largeTitle)
+                .padding(.top)
+
+            Text("カテゴリー: \(goal.category)") // Display the predicted category
+                .font(.subheadline)
+                .foregroundColor(.secondary)
+                .padding(.bottom, 20)
+
             LineChart(goal: goal)
                 .frame(height: 300)
                 .padding()
@@ -61,6 +70,14 @@ struct CycleData: Identifiable {
 
 struct GoalGraphView_Previews: PreviewProvider {
     static var previews: some View {
-        GoalGraphView(goal: Goal(title: "読書", purpose: "リラクゼーション", reward: "もっと読む", encouragement: nil, cycleDays: 7, nextCheatDay: Date()))
+        GoalGraphView(goal: Goal(
+            title: "Reading",
+            purpose: "Relaxation",
+            reward: "Read more",
+            encouragement: nil,
+            cycleDays: 7,
+            nextCheatDay: Date(),
+            category: "Reading" // Include the category parameter
+        ))
     }
 }
