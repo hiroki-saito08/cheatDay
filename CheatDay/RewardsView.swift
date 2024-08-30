@@ -1,8 +1,9 @@
 import SwiftUI
+import GoogleMobileAds
 
 struct RewardsView: View {
     @Binding var goals: [Goal]
-    
+
     var body: some View {
         NavigationView {
             ScrollView {
@@ -41,6 +42,11 @@ struct RewardsView: View {
                                     .frame(maxWidth: .infinity)
                                     .background(Color.green)
                                     .cornerRadius(10)
+                                
+                                // Insert the AdBannerView here, only on cheat days
+                                AdBannerView()
+                                    .frame(width: 320, height: 50)
+                                    .padding(.top, 10) // Add some space between the reward and the ad
                             } else {
                                 Text(goal.reward)
                                     .font(.yomogiBody())
@@ -79,7 +85,9 @@ struct RewardsView_Previews: PreviewProvider {
     static var previews: some View {
         RewardsView(goals: .constant([
             Goal(title: "読書の習慣をつける", purpose: "リラクゼーション", reward: "もっと読む", encouragement: nil, cycleDays: 7, nextCheatDay: Date(), category: "Reading"),
-            Goal(title: "映画鑑賞を楽しむ", purpose: "エンターテインメント", reward: "別の映画を見る", encouragement: "楽しみ続けてください！", cycleDays: 10, nextCheatDay: Calendar.current.date(byAdding: .day, value: 3, to: Date())!, category: "Entertainment")
+            Goal(title: "映画鑑賞を楽しむ", purpose: "エンターテインメント", reward: "別の映画を見る", encouragement: "楽しみ続けてください！", cycleDays: 10, nextCheatDay: Calendar.current.date(byAdding: .day, value: 3, to: Date())!, category: "Entertainment"),
+            // Test data for a goal with a cheat day set to today
+            Goal(title: "健康的な食事をする", purpose: "健康維持", reward: "好きなスイーツを食べる", encouragement: "素晴らしい選択です！今日も頑張りましょう！", cycleDays: 5, nextCheatDay: Date(), category: "Diet")
         ]))
     }
 }
