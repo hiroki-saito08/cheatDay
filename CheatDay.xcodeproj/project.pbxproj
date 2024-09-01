@@ -56,6 +56,7 @@
 		B079697A2C71C690006DDB90 /* Font+CustomStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07969772C71C690006DDB90 /* Font+CustomStyles.swift */; };
 		B0DA98322C75664B000D31FF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DA98312C75664B000D31FF /* SettingsView.swift */; };
 		B0DA98342C756E1E000D31FF /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DA98332C756E1E000D31FF /* CustomTabBarView.swift */; };
+		B0E842D52C83DFA500FDB791 /* BottomBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E842D42C83DFA500FDB791 /* BottomBarView.swift */; };
 		B0EBADD32C7D3342004F99B7 /* CheatDay_Machine Learning.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B0EBADD22C7D3342004F99B7 /* CheatDay_Machine Learning.mlmodel */; };
 		B0EBADD42C7D3342004F99B7 /* CheatDay_Machine Learning.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B0EBADD22C7D3342004F99B7 /* CheatDay_Machine Learning.mlmodel */; };
 		B0EBADD52C7D3342004F99B7 /* CheatDay_Machine Learning.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B0EBADD22C7D3342004F99B7 /* CheatDay_Machine Learning.mlmodel */; };
@@ -154,6 +155,7 @@
 		B07969772C71C690006DDB90 /* Font+CustomStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+CustomStyles.swift"; sourceTree = "<group>"; };
 		B0DA98312C75664B000D31FF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		B0DA98332C756E1E000D31FF /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
+		B0E842D42C83DFA500FDB791 /* BottomBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBarView.swift; sourceTree = "<group>"; };
 		B0EBADD22C7D3342004F99B7 /* CheatDay_Machine Learning.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "CheatDay_Machine Learning.mlmodel"; sourceTree = SOURCE_ROOT; };
 		B0EBADD62C7D372D004F99B7 /* ModelIntegration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelIntegration.swift; sourceTree = "<group>"; };
 		B0EBADDA2C7D4A61004F99B7 /* DailyQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuotes.swift; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 				B07969772C71C690006DDB90 /* Font+CustomStyles.swift */,
 				B05FB6462C8129D400985075 /* AppDelegate.swift */,
 				B01B442C2C81C19800F2A628 /* AdBannerView.swift */,
+				B0E842D42C83DFA500FDB791 /* BottomBarView.swift */,
 				B067A5542C697E20009CE862 /* Assets.xcassets */,
 				B067A5562C697E20009CE862 /* CheatDay.entitlements */,
 				B07969682C71C338006DDB90 /* Font */,
@@ -607,6 +610,7 @@
 				B00068452C75D8C000BE9445 /* MailView.swift in Sources */,
 				B00FB65F2C7AC3C600629C8F /* AffiliateAd.swift in Sources */,
 				B00068392C75CCEE00BE9445 /* ContactSupportView.swift in Sources */,
+				B0E842D52C83DFA500FDB791 /* BottomBarView.swift in Sources */,
 				B0DA98342C756E1E000D31FF /* CustomTabBarView.swift in Sources */,
 				B07969742C71C3D8006DDB90 /* CustomViewModifier.swift in Sources */,
 				B0DA98322C75664B000D31FF /* SettingsView.swift in Sources */,

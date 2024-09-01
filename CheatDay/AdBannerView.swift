@@ -1,16 +1,24 @@
 import SwiftUI
 import GoogleMobileAds
 
+// Custom Ad Banner View for Google AdMob with Category Targeting
 struct AdBannerView: UIViewRepresentable {
+    var category: String
+    
     func makeUIView(context: Context) -> GADBannerView {
-        let banner = GADBannerView(adSize: GADAdSizeBanner)
-        banner.adUnitID = "ca-app-pub-3940256099942544/2934735716" // Test ad unit ID
-        banner.rootViewController = UIApplication.shared.windows.first?.rootViewController
-        banner.load(GADRequest())
-        return banner
+        let bannerView = GADBannerView(adSize: GADAdSizeBanner)
+        bannerView.adUnitID = "ca-app-pub-9263407369400599~2833694935" // Replace with your actual ad unit ID
+        bannerView.rootViewController = UIApplication.shared.windows.first?.rootViewController
+        
+        // Create a GADRequest and add keywords based on the category
+        let request = GADRequest()
+        request.keywords = [category] // Use the category as a keyword
+        
+        bannerView.load(request)
+        return bannerView
     }
 
     func updateUIView(_ uiView: GADBannerView, context: Context) {
-        // No update needed for now
+        // Update UI if needed
     }
 }

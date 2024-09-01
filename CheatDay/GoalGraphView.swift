@@ -6,14 +6,11 @@ struct GoalGraphView: View {
     
     var body: some View {
         VStack {
-            Text("\(goal.title) の戦歴")
+            Text(goal.title)
                 .font(.largeTitle)
                 .padding(.top)
-
-            Text("カテゴリー: \(goal.category)") // Display the predicted category
-                .font(.subheadline)
-                .foregroundColor(.secondary)
-                .padding(.bottom, 20)
+            Text("の戦歴")
+                .font(.largeTitle)
 
             LineChart(goal: goal)
                 .frame(height: 300)
@@ -21,7 +18,6 @@ struct GoalGraphView: View {
             
             Spacer()
         }
-        .navigationBarTitle("\(goal.title) の戦歴", displayMode: .inline)
     }
 }
 
