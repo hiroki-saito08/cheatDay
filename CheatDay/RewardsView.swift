@@ -86,7 +86,7 @@ struct RewardsView: View {
     func setupAd() {
         let adSize = GADAdSizeBanner
         let newBannerView = GADBannerView(adSize: adSize)
-        newBannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716" // Test Ad Unit ID
+        newBannerView.adUnitID = "ca-app-pub-9263407369400599~2833694935"
         newBannerView.rootViewController = UIApplication.shared.connectedScenes
             .compactMap { $0 as? UIWindowScene }
             .flatMap { $0.windows }
