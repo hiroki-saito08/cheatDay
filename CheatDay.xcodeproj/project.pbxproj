@@ -25,6 +25,7 @@
 		B01B442D2C81C19800F2A628 /* AdBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01B442C2C81C19800F2A628 /* AdBannerView.swift */; };
 		B0342BCF2C9295DC008973B6 /* RequestNotificationPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0342BCE2C9295DC008973B6 /* RequestNotificationPermission.swift */; };
 		B0342BD22C929625008973B6 /* ScheduleNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0342BD12C929625008973B6 /* ScheduleNotification.swift */; };
+		B0487F512C9394A7003CAE0A /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0487F502C9394A7003CAE0A /* Entitlements.plist */; };
 		B05FB6472C8129D400985075 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05FB6462C8129D400985075 /* AppDelegate.swift */; };
 		B067A54F2C697E1D009CE862 /* CheatDayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B067A54E2C697E1D009CE862 /* CheatDayApp.swift */; };
 		B067A5552C697E20009CE862 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B067A5542C697E20009CE862 /* Assets.xcassets */; };
@@ -125,6 +126,7 @@
 		B01B442C2C81C19800F2A628 /* AdBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBannerView.swift; sourceTree = "<group>"; };
 		B0342BCE2C9295DC008973B6 /* RequestNotificationPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestNotificationPermission.swift; sourceTree = "<group>"; };
 		B0342BD12C929625008973B6 /* ScheduleNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScheduleNotification.swift; path = Pods/ScheduleNotification.swift; sourceTree = SOURCE_ROOT; };
+		B0487F502C9394A7003CAE0A /* Entitlements.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
 		B05FB6462C8129D400985075 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B05FB6532C8146D100985075 /* Podfile.lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile.lock; sourceTree = "<group>"; };
 		B05FB6592C81470100985075 /* GoogleMobileAds.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:EQHXZ8M8AV:Google LLC"; lastKnownFileType = wrapper.xcframework; path = GoogleMobileAds.xcframework; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 				B0342BD12C929625008973B6 /* ScheduleNotification.swift */,
 				B067A5542C697E20009CE862 /* Assets.xcassets */,
 				B067A5562C697E20009CE862 /* CheatDay.entitlements */,
+				B0487F502C9394A7003CAE0A /* Entitlements.plist */,
 				B07969682C71C338006DDB90 /* Font */,
 				B067A5572C697E20009CE862 /* Preview Content */,
 			);
@@ -468,6 +471,7 @@
 				B067A5592C697E20009CE862 /* Preview Assets.xcassets in Resources */,
 				B067A5552C697E20009CE862 /* Assets.xcassets in Resources */,
 				B067A57F2C699F66009CE862 /* Readme.md in Resources */,
+				B0487F512C9394A7003CAE0A /* Entitlements.plist in Resources */,
 				B067A57D2C699C25009CE862 /* GoogleService-Info.plist in Resources */,
 				B07969702C71C38B006DDB90 /* PatrickHand-Regular.ttf in Resources */,
 			);
@@ -833,12 +837,16 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CheatDay/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -848,7 +856,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = a.CheatDay;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hirokisaito.CheatDay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
@@ -878,12 +886,16 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CheatDay/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -893,7 +905,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = a.CheatDay;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hirokisaito.CheatDay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
