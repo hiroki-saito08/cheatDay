@@ -23,6 +23,8 @@
 		B01B44262C816E7B00F2A628 /* GoogleMobileAds.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B05FB6592C81470100985075 /* GoogleMobileAds.xcframework */; };
 		B01B44272C816E7B00F2A628 /* GoogleMobileAds.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B05FB6592C81470100985075 /* GoogleMobileAds.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B01B442D2C81C19800F2A628 /* AdBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01B442C2C81C19800F2A628 /* AdBannerView.swift */; };
+		B0342BCF2C9295DC008973B6 /* RequestNotificationPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0342BCE2C9295DC008973B6 /* RequestNotificationPermission.swift */; };
+		B0342BD22C929625008973B6 /* ScheduleNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0342BD12C929625008973B6 /* ScheduleNotification.swift */; };
 		B05FB6472C8129D400985075 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05FB6462C8129D400985075 /* AppDelegate.swift */; };
 		B067A54F2C697E1D009CE862 /* CheatDayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B067A54E2C697E1D009CE862 /* CheatDayApp.swift */; };
 		B067A5552C697E20009CE862 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B067A5542C697E20009CE862 /* Assets.xcassets */; };
@@ -121,6 +123,8 @@
 		B00FB65E2C7AC3C600629C8F /* AffiliateAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffiliateAd.swift; sourceTree = "<group>"; };
 		B00FB6602C7AC44D00629C8F /* AdsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsView.swift; sourceTree = "<group>"; };
 		B01B442C2C81C19800F2A628 /* AdBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBannerView.swift; sourceTree = "<group>"; };
+		B0342BCE2C9295DC008973B6 /* RequestNotificationPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestNotificationPermission.swift; sourceTree = "<group>"; };
+		B0342BD12C929625008973B6 /* ScheduleNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScheduleNotification.swift; path = Pods/ScheduleNotification.swift; sourceTree = SOURCE_ROOT; };
 		B05FB6462C8129D400985075 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B05FB6532C8146D100985075 /* Podfile.lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile.lock; sourceTree = "<group>"; };
 		B05FB6592C81470100985075 /* GoogleMobileAds.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:EQHXZ8M8AV:Google LLC"; lastKnownFileType = wrapper.xcframework; path = GoogleMobileAds.xcframework; sourceTree = "<group>"; };
@@ -306,6 +310,8 @@
 				B05FB6462C8129D400985075 /* AppDelegate.swift */,
 				B01B442C2C81C19800F2A628 /* AdBannerView.swift */,
 				B0E842D42C83DFA500FDB791 /* BottomBarView.swift */,
+				B0342BCE2C9295DC008973B6 /* RequestNotificationPermission.swift */,
+				B0342BD12C929625008973B6 /* ScheduleNotification.swift */,
 				B067A5542C697E20009CE862 /* Assets.xcassets */,
 				B067A5562C697E20009CE862 /* CheatDay.entitlements */,
 				B07969682C71C338006DDB90 /* Font */,
@@ -604,6 +610,7 @@
 				B079695B2C7195C8006DDB90 /* GoalGraphView.swift in Sources */,
 				B00068472C75DA6B00BE9445 /* ClearCacheView.swift in Sources */,
 				B06DFB602C6F2C6C00FCC272 /* Goal.swift in Sources */,
+				B0342BD22C929625008973B6 /* ScheduleNotification.swift in Sources */,
 				B00068372C75CCE200BE9445 /* FAQView.swift in Sources */,
 				B000684F2C75DDEB00BE9445 /* HandwrittenGoalModifier.swift in Sources */,
 				B00FB6612C7AC44D00629C8F /* AdsView.swift in Sources */,
@@ -618,6 +625,7 @@
 				B0EBADDB2C7D4A61004F99B7 /* DailyQuotes.swift in Sources */,
 				B000683F2C75CE0600BE9445 /* OpenSourceLicensesView.swift in Sources */,
 				B06DFB622C6F330400FCC272 /* GoalData.swift in Sources */,
+				B0342BCF2C9295DC008973B6 /* RequestNotificationPermission.swift in Sources */,
 				B06DFB582C6F2C0900FCC272 /* GoalsView.swift in Sources */,
 				B05FB6472C8129D400985075 /* AppDelegate.swift in Sources */,
 				B00068412C75CE2E00BE9445 /* SendFeedbackView.swift in Sources */,
