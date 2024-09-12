@@ -1,4 +1,5 @@
 import SwiftUI
+import CoreML
 
 struct GoalFormView: View {
     @Binding var goals: [Goal]
@@ -99,6 +100,11 @@ struct GoalFormView: View {
     }
     
     func saveGoal() {
+        // Predict the category for the goal using Core ML model
+        let goalCategory = predictCategory(from: title)
+        
+        print("Predicted Category for Goal '\(title)': \(goalCategory)") // Debug log
+
         if let editingGoal = editingGoal {
             if let index = goals.firstIndex(where: { $0.id == editingGoal.id }) {
                 goals[index].title = title
@@ -107,6 +113,7 @@ struct GoalFormView: View {
                 goals[index].encouragement = encouragement.isEmpty ? nil : encouragement
                 goals[index].cycleDays = Int(cycleDays) ?? 0
                 goals[index].nextCheatDay = Calendar.current.date(byAdding: .day, value: goals[index].cycleDays, to: Date()) ?? Date()
+                goals[index].category = goalCategory // Update category with predicted value
             }
         } else {
             if let days = Int(cycleDays) {
@@ -116,12 +123,29 @@ struct GoalFormView: View {
                     reward: reward,
                     encouragement: encouragement.isEmpty ? nil : encouragement,
                     cycleDays: days,
-                    nextCheatDay: Calendar.current.date(byAdding: .day, value: days, to: Date()) ?? Date()
+                    nextCheatDay: Calendar.current.date(byAdding: .day, value: days, to: Date()) ?? Date(),
+                    category: goalCategory // Set category with predicted value
                 )
                 goals.append(newGoal)
             }
         }
         presentationMode.wrappedValue.dismiss()
+    }
+
+    
+    // Prediction function to get category from Core ML model
+    func predictCategory(from goalTitle: String) -> String {
+        guard let model = try? CheatDay_Machine_Learning(configuration: .init()) else {
+            return "General" // Default category if prediction fails
+        }
+
+        do {
+            let prediction = try model.prediction(text: goalTitle)
+            return prediction.label // Return the predicted category label
+        } catch {
+            print("Prediction error: \(error.localizedDescription)")
+            return "General" // Default category if prediction fails
+        }
     }
 }
 

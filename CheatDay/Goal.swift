@@ -8,4 +8,5 @@ struct Goal: Identifiable {
     var encouragement: String?
     var cycleDays: Int
     var nextCheatDay: Date
+    var category: String // Add this line to store the predicted category
 }
