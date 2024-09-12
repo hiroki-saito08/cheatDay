@@ -26,6 +26,7 @@
 		B0342BCF2C9295DC008973B6 /* RequestNotificationPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0342BCE2C9295DC008973B6 /* RequestNotificationPermission.swift */; };
 		B0342BD22C929625008973B6 /* ScheduleNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0342BD12C929625008973B6 /* ScheduleNotification.swift */; };
 		B0487F512C9394A7003CAE0A /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0487F502C9394A7003CAE0A /* Entitlements.plist */; };
+		B0487F532C939A9F003CAE0A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B0487F522C939A9F003CAE0A /* .gitignore */; };
 		B05FB6472C8129D400985075 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05FB6462C8129D400985075 /* AppDelegate.swift */; };
 		B067A54F2C697E1D009CE862 /* CheatDayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B067A54E2C697E1D009CE862 /* CheatDayApp.swift */; };
 		B067A5552C697E20009CE862 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B067A5542C697E20009CE862 /* Assets.xcassets */; };
@@ -127,6 +128,7 @@
 		B0342BCE2C9295DC008973B6 /* RequestNotificationPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestNotificationPermission.swift; sourceTree = "<group>"; };
 		B0342BD12C929625008973B6 /* ScheduleNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScheduleNotification.swift; path = Pods/ScheduleNotification.swift; sourceTree = SOURCE_ROOT; };
 		B0487F502C9394A7003CAE0A /* Entitlements.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
+		B0487F522C939A9F003CAE0A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		B05FB6462C8129D400985075 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B05FB6532C8146D100985075 /* Podfile.lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile.lock; sourceTree = "<group>"; };
 		B05FB6592C81470100985075 /* GoogleMobileAds.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:EQHXZ8M8AV:Google LLC"; lastKnownFileType = wrapper.xcframework; path = GoogleMobileAds.xcframework; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 		B067A5422C697E1D009CE862 = {
 			isa = PBXGroup;
 			children = (
+				B0487F522C939A9F003CAE0A /* .gitignore */,
 				B067A57E2C699F66009CE862 /* Readme.md */,
 				B067A54D2C697E1D009CE862 /* CheatDay */,
 				B067A5612C697E21009CE862 /* CheatDayTests */,
@@ -467,6 +470,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0487F532C939A9F003CAE0A /* .gitignore in Resources */,
 				B079696C2C71C339006DDB90 /* Yomogi-Regular.ttf in Resources */,
 				B067A5592C697E20009CE862 /* Preview Assets.xcassets in Resources */,
 				B067A5552C697E20009CE862 /* Assets.xcassets in Resources */,
