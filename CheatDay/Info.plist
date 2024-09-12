@@ -2,10 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Yomogi-Regular.ttf</string>
-	</array>
 	<key>GADApplicationIdentifier</key>
 	<string>ca-app-pub-9263407369400599~2833694935</string>
 	<key>SKAdNetworkItems</key>
@@ -14,6 +10,10 @@
 			<key>SKAdNetworkIdentifier</key>
 			<string>cstr6suwn9.skadnetwork</string>
 		</dict>
+	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Yomogi-Regular.ttf</string>
 	</array>
 	<key>UIBackgroundModes</key>
 	<array>
