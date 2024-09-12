@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39A16E40E4D8DEC9F9F289AD /* Pods_CheatDay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F14C3C18E00AFDB41CA2CFB /* Pods_CheatDay.framework */; };
 		B00068352C75BAE900BE9445 /* GoalFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00068342C75BAE900BE9445 /* GoalFormView.swift */; };
 		B00068372C75CCE200BE9445 /* FAQView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00068362C75CCE200BE9445 /* FAQView.swift */; };
 		B00068392C75CCEE00BE9445 /* ContactSupportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00068382C75CCEE00BE9445 /* ContactSupportView.swift */; };
@@ -17,6 +18,14 @@
 		B00068452C75D8C000BE9445 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00068442C75D8C000BE9445 /* MailView.swift */; };
 		B00068472C75DA6B00BE9445 /* ClearCacheView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00068462C75DA6B00BE9445 /* ClearCacheView.swift */; };
 		B000684F2C75DDEB00BE9445 /* HandwrittenGoalModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B000684E2C75DDEB00BE9445 /* HandwrittenGoalModifier.swift */; };
+		B00FB65F2C7AC3C600629C8F /* AffiliateAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB65E2C7AC3C600629C8F /* AffiliateAd.swift */; };
+		B00FB6612C7AC44D00629C8F /* AdsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB6602C7AC44D00629C8F /* AdsView.swift */; };
+		B01B44262C816E7B00F2A628 /* GoogleMobileAds.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B05FB6592C81470100985075 /* GoogleMobileAds.xcframework */; };
+		B01B44272C816E7B00F2A628 /* GoogleMobileAds.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B05FB6592C81470100985075 /* GoogleMobileAds.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B01B442D2C81C19800F2A628 /* AdBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01B442C2C81C19800F2A628 /* AdBannerView.swift */; };
+		B0342BCF2C9295DC008973B6 /* RequestNotificationPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0342BCE2C9295DC008973B6 /* RequestNotificationPermission.swift */; };
+		B0342BD22C929625008973B6 /* ScheduleNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0342BD12C929625008973B6 /* ScheduleNotification.swift */; };
+		B05FB6472C8129D400985075 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05FB6462C8129D400985075 /* AppDelegate.swift */; };
 		B067A54F2C697E1D009CE862 /* CheatDayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B067A54E2C697E1D009CE862 /* CheatDayApp.swift */; };
 		B067A5552C697E20009CE862 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B067A5542C697E20009CE862 /* Assets.xcassets */; };
 		B067A5592C697E20009CE862 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B067A5582C697E20009CE862 /* Preview Assets.xcassets */; };
@@ -49,6 +58,18 @@
 		B079697A2C71C690006DDB90 /* Font+CustomStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07969772C71C690006DDB90 /* Font+CustomStyles.swift */; };
 		B0DA98322C75664B000D31FF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DA98312C75664B000D31FF /* SettingsView.swift */; };
 		B0DA98342C756E1E000D31FF /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DA98332C756E1E000D31FF /* CustomTabBarView.swift */; };
+		B0E842D52C83DFA500FDB791 /* BottomBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E842D42C83DFA500FDB791 /* BottomBarView.swift */; };
+		B0EBADD32C7D3342004F99B7 /* CheatDay_Machine Learning.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B0EBADD22C7D3342004F99B7 /* CheatDay_Machine Learning.mlmodel */; };
+		B0EBADD42C7D3342004F99B7 /* CheatDay_Machine Learning.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B0EBADD22C7D3342004F99B7 /* CheatDay_Machine Learning.mlmodel */; };
+		B0EBADD52C7D3342004F99B7 /* CheatDay_Machine Learning.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B0EBADD22C7D3342004F99B7 /* CheatDay_Machine Learning.mlmodel */; };
+		B0EBADD72C7D372D004F99B7 /* ModelIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EBADD62C7D372D004F99B7 /* ModelIntegration.swift */; };
+		B0EBADD82C7D372D004F99B7 /* ModelIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EBADD62C7D372D004F99B7 /* ModelIntegration.swift */; };
+		B0EBADD92C7D372D004F99B7 /* ModelIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EBADD62C7D372D004F99B7 /* ModelIntegration.swift */; };
+		B0EBADDB2C7D4A61004F99B7 /* DailyQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EBADDA2C7D4A61004F99B7 /* DailyQuotes.swift */; };
+		B0EBADDC2C7D4A61004F99B7 /* DailyQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EBADDA2C7D4A61004F99B7 /* DailyQuotes.swift */; };
+		B0EBADDD2C7D4A61004F99B7 /* DailyQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EBADDA2C7D4A61004F99B7 /* DailyQuotes.swift */; };
+		E030B60AF79B58EDCCBB07A8 /* Pods_CheatDayTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45A59F244D8AF5C2EB0FB4D4 /* Pods_CheatDayTests.framework */; };
+		EBED2CEB760DCDF946DC34F4 /* Pods_CheatDayUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A5745D8B2F7E6228BB6A7DD /* Pods_CheatDayUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +89,27 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B05FB6652C81472800985075 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B01B44272C816E7B00F2A628 /* GoogleMobileAds.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0F14C3C18E00AFDB41CA2CFB /* Pods_CheatDay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CheatDay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		13BBF1252441A387DE021A88 /* Pods-CheatDayUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheatDayUITests.release.xcconfig"; path = "Target Support Files/Pods-CheatDayUITests/Pods-CheatDayUITests.release.xcconfig"; sourceTree = "<group>"; };
+		24D92104BC98B9067443755C /* Pods-CheatDayUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheatDayUITests.debug.xcconfig"; path = "Target Support Files/Pods-CheatDayUITests/Pods-CheatDayUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3A5745D8B2F7E6228BB6A7DD /* Pods_CheatDayUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CheatDayUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		45A59F244D8AF5C2EB0FB4D4 /* Pods_CheatDayTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CheatDayTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A8F31D1CAE7490452FA5D02 /* Pods-CheatDay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheatDay.release.xcconfig"; path = "Target Support Files/Pods-CheatDay/Pods-CheatDay.release.xcconfig"; sourceTree = "<group>"; };
 		B00068342C75BAE900BE9445 /* GoalFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalFormView.swift; sourceTree = "<group>"; };
 		B00068362C75CCE200BE9445 /* FAQView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQView.swift; sourceTree = "<group>"; };
 		B00068382C75CCEE00BE9445 /* ContactSupportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactSupportView.swift; sourceTree = "<group>"; };
@@ -79,6 +120,16 @@
 		B00068442C75D8C000BE9445 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		B00068462C75DA6B00BE9445 /* ClearCacheView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearCacheView.swift; sourceTree = "<group>"; };
 		B000684E2C75DDEB00BE9445 /* HandwrittenGoalModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandwrittenGoalModifier.swift; sourceTree = "<group>"; };
+		B00FB65E2C7AC3C600629C8F /* AffiliateAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffiliateAd.swift; sourceTree = "<group>"; };
+		B00FB6602C7AC44D00629C8F /* AdsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsView.swift; sourceTree = "<group>"; };
+		B01B442C2C81C19800F2A628 /* AdBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBannerView.swift; sourceTree = "<group>"; };
+		B0342BCE2C9295DC008973B6 /* RequestNotificationPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestNotificationPermission.swift; sourceTree = "<group>"; };
+		B0342BD12C929625008973B6 /* ScheduleNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScheduleNotification.swift; path = Pods/ScheduleNotification.swift; sourceTree = SOURCE_ROOT; };
+		B05FB6462C8129D400985075 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B05FB6532C8146D100985075 /* Podfile.lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile.lock; sourceTree = "<group>"; };
+		B05FB6592C81470100985075 /* GoogleMobileAds.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:EQHXZ8M8AV:Google LLC"; lastKnownFileType = wrapper.xcframework; path = GoogleMobileAds.xcframework; sourceTree = "<group>"; };
+		B05FB65C2C81470100985075 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		B05FB65D2C81470100985075 /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		B067A54B2C697E1D009CE862 /* CheatDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheatDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B067A54E2C697E1D009CE862 /* CheatDayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheatDayApp.swift; sourceTree = "<group>"; };
 		B067A5542C697E20009CE862 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -108,6 +159,13 @@
 		B07969772C71C690006DDB90 /* Font+CustomStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+CustomStyles.swift"; sourceTree = "<group>"; };
 		B0DA98312C75664B000D31FF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		B0DA98332C756E1E000D31FF /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
+		B0E842D42C83DFA500FDB791 /* BottomBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBarView.swift; sourceTree = "<group>"; };
+		B0EBADD22C7D3342004F99B7 /* CheatDay_Machine Learning.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "CheatDay_Machine Learning.mlmodel"; sourceTree = SOURCE_ROOT; };
+		B0EBADD62C7D372D004F99B7 /* ModelIntegration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelIntegration.swift; sourceTree = "<group>"; };
+		B0EBADDA2C7D4A61004F99B7 /* DailyQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuotes.swift; sourceTree = "<group>"; };
+		C1E49FAA53C865987427EAFE /* Pods-CheatDay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheatDay.debug.xcconfig"; path = "Target Support Files/Pods-CheatDay/Pods-CheatDay.debug.xcconfig"; sourceTree = "<group>"; };
+		E371BFE0F390DC9D42953D5C /* Pods-CheatDayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheatDayTests.release.xcconfig"; path = "Target Support Files/Pods-CheatDayTests/Pods-CheatDayTests.release.xcconfig"; sourceTree = "<group>"; };
+		F2244424D471C9C68EDED11B /* Pods-CheatDayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheatDayTests.debug.xcconfig"; path = "Target Support Files/Pods-CheatDayTests/Pods-CheatDayTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +173,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B01B44262C816E7B00F2A628 /* GoogleMobileAds.xcframework in Frameworks */,
+				39A16E40E4D8DEC9F9F289AD /* Pods_CheatDay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +182,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E030B60AF79B58EDCCBB07A8 /* Pods_CheatDayTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,12 +190,65 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBED2CEB760DCDF946DC34F4 /* Pods_CheatDayUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		690262804712879E97E0233E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C1E49FAA53C865987427EAFE /* Pods-CheatDay.debug.xcconfig */,
+				9A8F31D1CAE7490452FA5D02 /* Pods-CheatDay.release.xcconfig */,
+				F2244424D471C9C68EDED11B /* Pods-CheatDayTests.debug.xcconfig */,
+				E371BFE0F390DC9D42953D5C /* Pods-CheatDayTests.release.xcconfig */,
+				24D92104BC98B9067443755C /* Pods-CheatDayUITests.debug.xcconfig */,
+				13BBF1252441A387DE021A88 /* Pods-CheatDayUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8770308E99BB302506749079 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B05FB65E2C81470100985075 /* Google-Mobile-Ads-SDK */,
+				B05FB6532C8146D100985075 /* Podfile.lock */,
+				0F14C3C18E00AFDB41CA2CFB /* Pods_CheatDay.framework */,
+				45A59F244D8AF5C2EB0FB4D4 /* Pods_CheatDayTests.framework */,
+				3A5745D8B2F7E6228BB6A7DD /* Pods_CheatDayUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B05FB65A2C81470100985075 /* GoogleMobileAdsFramework */ = {
+			isa = PBXGroup;
+			children = (
+				B05FB6592C81470100985075 /* GoogleMobileAds.xcframework */,
+			);
+			path = GoogleMobileAdsFramework;
+			sourceTree = "<group>";
+		};
+		B05FB65B2C81470100985075 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B05FB65A2C81470100985075 /* GoogleMobileAdsFramework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		B05FB65E2C81470100985075 /* Google-Mobile-Ads-SDK */ = {
+			isa = PBXGroup;
+			children = (
+				B05FB65B2C81470100985075 /* Frameworks */,
+				B05FB65C2C81470100985075 /* LICENSE */,
+				B05FB65D2C81470100985075 /* README.txt */,
+			);
+			name = "Google-Mobile-Ads-SDK";
+			path = "Pods/Google-Mobile-Ads-SDK";
+			sourceTree = "<group>";
+		};
 		B067A5422C697E1D009CE862 = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +257,8 @@
 				B067A5612C697E21009CE862 /* CheatDayTests */,
 				B067A56B2C697E21009CE862 /* CheatDayUITests */,
 				B067A54C2C697E1D009CE862 /* Products */,
+				8770308E99BB302506749079 /* Frameworks */,
+				690262804712879E97E0233E /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,6 +275,7 @@
 		B067A54D2C697E1D009CE862 /* CheatDay */ = {
 			isa = PBXGroup;
 			children = (
+				B0EBADD22C7D3342004F99B7 /* CheatDay_Machine Learning.mlmodel */,
 				B067A57C2C699C25009CE862 /* GoogleService-Info.plist */,
 				B067A57B2C6983AF009CE862 /* Info.plist */,
 				B067A54E2C697E1D009CE862 /* CheatDayApp.swift */,
@@ -177,6 +294,9 @@
 				B000683E2C75CE0600BE9445 /* OpenSourceLicensesView.swift */,
 				B000683A2C75CDD400BE9445 /* PrivacyPolicyView.swift */,
 				B00068382C75CCEE00BE9445 /* ContactSupportView.swift */,
+				B00FB65E2C7AC3C600629C8F /* AffiliateAd.swift */,
+				B00FB6602C7AC44D00629C8F /* AdsView.swift */,
+				B0EBADD62C7D372D004F99B7 /* ModelIntegration.swift */,
 				B00068442C75D8C000BE9445 /* MailView.swift */,
 				B00068362C75CCE200BE9445 /* FAQView.swift */,
 				B0DA98332C756E1E000D31FF /* CustomTabBarView.swift */,
@@ -185,7 +305,13 @@
 				B06DFB612C6F330400FCC272 /* GoalData.swift */,
 				B000684E2C75DDEB00BE9445 /* HandwrittenGoalModifier.swift */,
 				B07969732C71C3D8006DDB90 /* CustomViewModifier.swift */,
+				B0EBADDA2C7D4A61004F99B7 /* DailyQuotes.swift */,
 				B07969772C71C690006DDB90 /* Font+CustomStyles.swift */,
+				B05FB6462C8129D400985075 /* AppDelegate.swift */,
+				B01B442C2C81C19800F2A628 /* AdBannerView.swift */,
+				B0E842D42C83DFA500FDB791 /* BottomBarView.swift */,
+				B0342BCE2C9295DC008973B6 /* RequestNotificationPermission.swift */,
+				B0342BD12C929625008973B6 /* ScheduleNotification.swift */,
 				B067A5542C697E20009CE862 /* Assets.xcassets */,
 				B067A5562C697E20009CE862 /* CheatDay.entitlements */,
 				B07969682C71C338006DDB90 /* Font */,
@@ -235,9 +361,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B067A5722C697E21009CE862 /* Build configuration list for PBXNativeTarget "CheatDay" */;
 			buildPhases = (
+				4E5C1A9A0E8619D65A548ED7 /* [CP] Check Pods Manifest.lock */,
 				B067A5472C697E1D009CE862 /* Sources */,
 				B067A5482C697E1D009CE862 /* Frameworks */,
 				B067A5492C697E1D009CE862 /* Resources */,
+				B05FB6652C81472800985075 /* Embed Frameworks */,
+				35B84C4EBD991A991D63A716 /* [CP] Embed Pods Frameworks */,
+				48D5581EE56BD8DC4FF34957 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -252,6 +382,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B067A5752C697E21009CE862 /* Build configuration list for PBXNativeTarget "CheatDayTests" */;
 			buildPhases = (
+				35424021AE5498E55C61E46E /* [CP] Check Pods Manifest.lock */,
 				B067A55A2C697E21009CE862 /* Sources */,
 				B067A55B2C697E21009CE862 /* Frameworks */,
 				B067A55C2C697E21009CE862 /* Resources */,
@@ -270,6 +401,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B067A5782C697E21009CE862 /* Build configuration list for PBXNativeTarget "CheatDayUITests" */;
 			buildPhases = (
+				5DE7C1B765B0DCF79425A8B3 /* [CP] Check Pods Manifest.lock */,
 				B067A5642C697E21009CE862 /* Sources */,
 				B067A5652C697E21009CE862 /* Frameworks */,
 				B067A5662C697E21009CE862 /* Resources */,
@@ -361,6 +493,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		35424021AE5498E55C61E46E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CheatDayTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		35B84C4EBD991A991D63A716 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CheatDay/Pods-CheatDay-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CheatDay/Pods-CheatDay-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CheatDay/Pods-CheatDay-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		48D5581EE56BD8DC4FF34957 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CheatDay/Pods-CheatDay-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CheatDay/Pods-CheatDay-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CheatDay/Pods-CheatDay-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4E5C1A9A0E8619D65A548ED7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CheatDay-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5DE7C1B765B0DCF79425A8B3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CheatDayUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B067A5472C697E1D009CE862 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -368,26 +603,36 @@
 			files = (
 				B06DFB562C6F2BE700FCC272 /* ContentView.swift in Sources */,
 				B079695F2C7198CD006DDB90 /* MainView.swift in Sources */,
+				B0EBADD72C7D372D004F99B7 /* ModelIntegration.swift in Sources */,
+				B01B442D2C81C19800F2A628 /* AdBannerView.swift in Sources */,
 				B06DFB5C2C6F2C3000FCC272 /* RewardsView.swift in Sources */,
 				B079695D2C7198B1006DDB90 /* CheatDayScreen.swift in Sources */,
 				B079695B2C7195C8006DDB90 /* GoalGraphView.swift in Sources */,
 				B00068472C75DA6B00BE9445 /* ClearCacheView.swift in Sources */,
 				B06DFB602C6F2C6C00FCC272 /* Goal.swift in Sources */,
+				B0342BD22C929625008973B6 /* ScheduleNotification.swift in Sources */,
 				B00068372C75CCE200BE9445 /* FAQView.swift in Sources */,
 				B000684F2C75DDEB00BE9445 /* HandwrittenGoalModifier.swift in Sources */,
+				B00FB6612C7AC44D00629C8F /* AdsView.swift in Sources */,
 				B00068452C75D8C000BE9445 /* MailView.swift in Sources */,
+				B00FB65F2C7AC3C600629C8F /* AffiliateAd.swift in Sources */,
 				B00068392C75CCEE00BE9445 /* ContactSupportView.swift in Sources */,
+				B0E842D52C83DFA500FDB791 /* BottomBarView.swift in Sources */,
 				B0DA98342C756E1E000D31FF /* CustomTabBarView.swift in Sources */,
 				B07969742C71C3D8006DDB90 /* CustomViewModifier.swift in Sources */,
 				B0DA98322C75664B000D31FF /* SettingsView.swift in Sources */,
 				B07969782C71C690006DDB90 /* Font+CustomStyles.swift in Sources */,
+				B0EBADDB2C7D4A61004F99B7 /* DailyQuotes.swift in Sources */,
 				B000683F2C75CE0600BE9445 /* OpenSourceLicensesView.swift in Sources */,
 				B06DFB622C6F330400FCC272 /* GoalData.swift in Sources */,
+				B0342BCF2C9295DC008973B6 /* RequestNotificationPermission.swift in Sources */,
 				B06DFB582C6F2C0900FCC272 /* GoalsView.swift in Sources */,
+				B05FB6472C8129D400985075 /* AppDelegate.swift in Sources */,
 				B00068412C75CE2E00BE9445 /* SendFeedbackView.swift in Sources */,
 				B06DFB5A2C6F2C1F00FCC272 /* PlansView.swift in Sources */,
 				B000683D2C75CDE800BE9445 /* TermsOfServiceView.swift in Sources */,
 				B06DFB5E2C6F2C4300FCC272 /* BattleHistoryView.swift in Sources */,
+				B0EBADD32C7D3342004F99B7 /* CheatDay_Machine Learning.mlmodel in Sources */,
 				B067A54F2C697E1D009CE862 /* CheatDayApp.swift in Sources */,
 				B000683B2C75CDD400BE9445 /* PrivacyPolicyView.swift in Sources */,
 				B00068352C75BAE900BE9445 /* GoalFormView.swift in Sources */,
@@ -398,6 +643,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0EBADDC2C7D4A61004F99B7 /* DailyQuotes.swift in Sources */,
+				B0EBADD42C7D3342004F99B7 /* CheatDay_Machine Learning.mlmodel in Sources */,
+				B0EBADD82C7D372D004F99B7 /* ModelIntegration.swift in Sources */,
 				B07969792C71C690006DDB90 /* Font+CustomStyles.swift in Sources */,
 				B07969752C71C3D8006DDB90 /* CustomViewModifier.swift in Sources */,
 				B067A5632C697E21009CE862 /* CheatDayTests.swift in Sources */,
@@ -409,9 +657,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B07969762C71C3D8006DDB90 /* CustomViewModifier.swift in Sources */,
+				B0EBADD92C7D372D004F99B7 /* ModelIntegration.swift in Sources */,
+				B0EBADD52C7D3342004F99B7 /* CheatDay_Machine Learning.mlmodel in Sources */,
 				B067A56F2C697E21009CE862 /* CheatDayUITestsLaunchTests.swift in Sources */,
 				B067A56D2C697E21009CE862 /* CheatDayUITests.swift in Sources */,
 				B079697A2C71C690006DDB90 /* Font+CustomStyles.swift in Sources */,
+				B0EBADDD2C7D4A61004F99B7 /* DailyQuotes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,7 +719,12 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/Pods/Google-Mobile-Ads-SDK/Frameworks/GoogleMobileAdsFramework/**",
+					"$(inherited)/**",
+				);
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -483,12 +739,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 			};
 			name = Debug;
 		};
@@ -529,7 +790,12 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/Pods/Google-Mobile-Ads-SDK/Frameworks/GoogleMobileAdsFramework/**",
+					"$(inherited)/**",
+				);
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -538,15 +804,21 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 			};
 			name = Release;
 		};
 		B067A5732C697E21009CE862 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1E49FAA53C865987427EAFE /* Pods-CheatDay.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -557,6 +829,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"CheatDay/Preview Content\"";
 				DEVELOPMENT_TEAM = K954L25GWL;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CheatDay/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
@@ -573,13 +846,15 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = a.CheatDay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -588,6 +863,7 @@
 		};
 		B067A5742C697E21009CE862 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A8F31D1CAE7490452FA5D02 /* Pods-CheatDay.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -598,6 +874,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"CheatDay/Preview Content\"";
 				DEVELOPMENT_TEAM = K954L25GWL;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CheatDay/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
@@ -614,13 +891,15 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = a.CheatDay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -629,6 +908,7 @@
 		};
 		B067A5762C697E21009CE862 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2244424D471C9C68EDED11B /* Pods-CheatDayTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -637,12 +917,12 @@
 				DEVELOPMENT_TEAM = K954L25GWL;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
-				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = a.CheatDayTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -652,6 +932,7 @@
 		};
 		B067A5772C697E21009CE862 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E371BFE0F390DC9D42953D5C /* Pods-CheatDayTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -660,12 +941,12 @@
 				DEVELOPMENT_TEAM = K954L25GWL;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
-				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = a.CheatDayTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -675,6 +956,7 @@
 		};
 		B067A5792C697E21009CE862 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24D92104BC98B9067443755C /* Pods-CheatDayUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -682,12 +964,12 @@
 				DEVELOPMENT_TEAM = K954L25GWL;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
-				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = a.CheatDayUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -697,6 +979,7 @@
 		};
 		B067A57A2C697E21009CE862 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13BBF1252441A387DE021A88 /* Pods-CheatDayUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -704,12 +987,12 @@
 				DEVELOPMENT_TEAM = K954L25GWL;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
-				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = a.CheatDayUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
