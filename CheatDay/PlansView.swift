@@ -26,7 +26,7 @@ struct PlansView: View {
                                 Spacer()
 
                                 if let goal = goalForDay(day) {
-                                    Text(daysUntil(day) == 0 ? "今日は \(goal.title) チートデイ" : "\(daysUntil(day)) 日後は \(goal.title) チートデイ")
+                                    Text(daysUntil(day) == 0 ? "今日は \(goal.title) のチートデイです！！" : "\(daysUntil(day)) 日後は \(goal.title) のチートデイ")
                                         .font(.yomogiBody())
                                         .foregroundColor(.primary)
                                         .multilineTextAlignment(.leading)
@@ -111,7 +111,8 @@ struct PlansView: View {
         let startOfTargetDay = calendar.startOfDay(for: date)
         
         let components = calendar.dateComponents([.day], from: startOfToday, to: startOfTargetDay)
-        return (components.day ?? 0) + 1 // Adding 1 to include today
+        
+        return components.day ?? 0 // 1日を加算しない
     }
 }
 
