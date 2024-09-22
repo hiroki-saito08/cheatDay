@@ -107,8 +107,11 @@ struct PlansView: View {
     // Helper function to calculate days until the next cheat day
     func daysUntil(_ date: Date) -> Int {
         let calendar = Calendar.current
-        let components = calendar.dateComponents([.day], from: Date(), to: date)
-        return components.day ?? 0
+        let startOfToday = calendar.startOfDay(for: Date())
+        let startOfTargetDay = calendar.startOfDay(for: date)
+        
+        let components = calendar.dateComponents([.day], from: startOfToday, to: startOfTargetDay)
+        return (components.day ?? 0) + 1 // Adding 1 to include today
     }
 }
 
