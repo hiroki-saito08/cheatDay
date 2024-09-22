@@ -77,9 +77,9 @@ struct GoalGraphView_Previews: PreviewProvider {
             nextCheatDay: Date(),
             category: "Reading",
             cheatDayHistory: [ // 実際のチートデイの履歴
-                Calendar.current.date(byAdding: .day, value: -21, to: Date())!,
-                Calendar.current.date(byAdding: .day, value: -14, to: Date())!,
-                Calendar.current.date(byAdding: .day, value: -7, to: Date())!
+                Calendar.current.date(byAdding: .day, value: -20, to: Date())!,
+                Calendar.current.date(byAdding: .day, value: -13, to: Date())!,
+                Calendar.current.date(byAdding: .day, value: -1, to: Date())!
             ]
         ))
     }
