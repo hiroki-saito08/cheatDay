@@ -90,6 +90,9 @@ struct GoalFormView: View {
         if cycleDays.isEmpty {
             errorMessage = "サイクル日数は必須です。"
             return false
+        } else if let days = Int(cycleDays), days <= 0 {
+            errorMessage = "サイクル日数は1日以上で入力してください。"
+            return false
         } else if Int(cycleDays) == nil {
             errorMessage = "サイクル日数は数字で入力してください。"
             return false
