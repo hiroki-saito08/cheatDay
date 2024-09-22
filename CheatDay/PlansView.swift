@@ -26,7 +26,7 @@ struct PlansView: View {
                                 Spacer()
 
                                 if let goal = goalForDay(day) {
-                                    Text(daysUntil(day) == 0 ? "今日は \(goal.title) チートデイ" : "\(daysUntil(day)) 日後は \(goal.title) チートデイ")
+                                    Text(daysUntil(day) == 0 ? "今日は \(goal.title) のチートデイです！！" : "\(daysUntil(day)) 日後は \(goal.title) のチートデイ")
                                         .font(.yomogiBody())
                                         .foregroundColor(.primary)
                                         .multilineTextAlignment(.leading)
@@ -107,8 +107,12 @@ struct PlansView: View {
     // Helper function to calculate days until the next cheat day
     func daysUntil(_ date: Date) -> Int {
         let calendar = Calendar.current
-        let components = calendar.dateComponents([.day], from: Date(), to: date)
-        return components.day ?? 0
+        let startOfToday = calendar.startOfDay(for: Date())
+        let startOfTargetDay = calendar.startOfDay(for: date)
+        
+        let components = calendar.dateComponents([.day], from: startOfToday, to: startOfTargetDay)
+        
+        return components.day ?? 0 // 1日を加算しない
     }
 }
 

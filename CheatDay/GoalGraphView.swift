@@ -42,22 +42,24 @@ struct LineChart: View {
         .chartYAxisLabel("チートデイの間隔(日数)")
     }
     
-    // Generate data for the line graph based on the cheat day cycle for a specific goal
+    // Generate data based on the actual cheat days
     func generateCycleData(for goal: Goal) -> [CycleData] {
         var cycleData: [CycleData] = []
-        var startDate = goal.nextCheatDay
+        var previousCheatDay = goal.nextCheatDay // 最初のチートデイ
         let cycleDays = goal.cycleDays
         
-        // Simulate cycle data with a set number of intervals
-        for increment in stride(from: cycleDays, to: cycleDays + 9, by: 3) {
-            cycleData.append(CycleData(date: startDate, daysBetween: increment))
-            startDate = Calendar.current.date(byAdding: .day, value: increment, to: startDate) ?? startDate
+        // チートデイの履歴が保存されていると仮定し、それに基づいてデータを生成
+        for cheatDay in goal.cheatDayHistory {
+            let daysBetween = Calendar.current.dateComponents([.day], from: previousCheatDay, to: cheatDay).day ?? cycleDays
+            cycleData.append(CycleData(date: cheatDay, daysBetween: daysBetween))
+            previousCheatDay = cheatDay
         }
         
         return cycleData
     }
 }
 
+// CycleData struct to store each cheat day and the interval between them
 struct CycleData: Identifiable {
     let id = UUID()
     let date: Date
@@ -73,7 +75,12 @@ struct GoalGraphView_Previews: PreviewProvider {
             encouragement: nil,
             cycleDays: 7,
             nextCheatDay: Date(),
-            category: "Reading" // Include the category parameter
+            category: "Reading",
+            cheatDayHistory: [ // 実際のチートデイの履歴
+                Calendar.current.date(byAdding: .day, value: -21, to: Date())!,
+                Calendar.current.date(byAdding: .day, value: -14, to: Date())!,
+                Calendar.current.date(byAdding: .day, value: -7, to: Date())!
+            ]
         ))
     }
 }

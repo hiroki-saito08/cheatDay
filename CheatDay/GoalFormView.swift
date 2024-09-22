@@ -90,6 +90,9 @@ struct GoalFormView: View {
         if cycleDays.isEmpty {
             errorMessage = "サイクル日数は必須です。"
             return false
+        } else if let days = Int(cycleDays), days <= 0 {
+            errorMessage = "サイクル日数は1日以上で入力してください。"
+            return false
         } else if Int(cycleDays) == nil {
             errorMessage = "サイクル日数は数字で入力してください。"
             return false
@@ -100,23 +103,25 @@ struct GoalFormView: View {
     }
     
     func saveGoal() {
-        // Predict the category for the goal using Core ML model
+        // Core MLモデルを使用して目標のカテゴリを予測
         let goalCategory = predictCategory(from: title)
         
-        print("Predicted Category for Goal '\(title)': \(goalCategory)") // Debug log
+        print("Predicted Category for Goal '\(title)': \(goalCategory)") // デバッグログ
 
         if let editingGoal = editingGoal {
             if let index = goals.firstIndex(where: { $0.id == editingGoal.id }) {
+                // 既存の目標を更新
                 goals[index].title = title
                 goals[index].purpose = purpose
                 goals[index].reward = reward
                 goals[index].encouragement = encouragement.isEmpty ? nil : encouragement
                 goals[index].cycleDays = Int(cycleDays) ?? 0
                 goals[index].nextCheatDay = Calendar.current.date(byAdding: .day, value: goals[index].cycleDays, to: Date()) ?? Date()
-                goals[index].category = goalCategory // Update category with predicted value
+                goals[index].category = goalCategory // 予測されたカテゴリで更新
             }
         } else {
             if let days = Int(cycleDays) {
+                // 新しい目標を作成
                 let newGoal = Goal(
                     title: title,
                     purpose: purpose,
@@ -124,12 +129,57 @@ struct GoalFormView: View {
                     encouragement: encouragement.isEmpty ? nil : encouragement,
                     cycleDays: days,
                     nextCheatDay: Calendar.current.date(byAdding: .day, value: days, to: Date()) ?? Date(),
-                    category: goalCategory // Set category with predicted value
+                    category: goalCategory // 予測されたカテゴリを設定
                 )
                 goals.append(newGoal)
+                
+                // 通知が有効なら、通知をスケジュール
+                if UserDefaults.standard.bool(forKey: "notificationsEnabled") {
+                    scheduleNotifications(for: newGoal)
+                }
             }
         }
+        
+        // 画面を閉じる
         presentationMode.wrappedValue.dismiss()
+    }
+
+    // 通知をスケジュールする関数
+    func scheduleNotifications(for goal: Goal) {
+        let center = UNUserNotificationCenter.current()
+        
+        // 同じ目標に対する古い通知を削除して重複を防ぐ
+        center.removeAllPendingNotificationRequests()
+        
+        let calendar = Calendar.current
+        let cheatDay = goal.nextCheatDay
+        
+        // 例: チートデイの7日前、3日前、1日前に通知
+        let firstNotificationDate = calendar.date(byAdding: .day, value: -7, to: cheatDay)
+        let secondNotificationDate = calendar.date(byAdding: .day, value: -3, to: cheatDay)
+        let oneDayBeforeNotificationDate = calendar.date(byAdding: .day, value: -1, to: cheatDay)
+        
+        let dates = [firstNotificationDate, secondNotificationDate, oneDayBeforeNotificationDate]
+        
+        for (index, date) in dates.enumerated() {
+            if let date = date {
+                let daysUntil = calendar.dateComponents([.day], from: Date(), to: date).day ?? 0
+                let content = UNMutableNotificationContent()
+                content.title = "「\(goal.title)」のチートデイまであと\(daysUntil)日！！"
+                content.body = "チートデイまでもう少し頑張ろう！"
+                content.sound = .default
+
+                let triggerDate = calendar.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
+                let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
+
+                let request = UNNotificationRequest(identifier: "cheatDayNotification_\(index)_\(goal.id)", content: content, trigger: trigger)
+                center.add(request) { error in
+                    if let error = error {
+                        print("通知のスケジュールに失敗しました: \(error.localizedDescription)")
+                    }
+                }
+            }
+        }
     }
 
     

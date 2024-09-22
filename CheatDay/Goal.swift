@@ -8,5 +8,6 @@ struct Goal: Identifiable {
     var encouragement: String?
     var cycleDays: Int
     var nextCheatDay: Date
-    var category: String // Add this line to store the predicted category
+    var category: String // 予測されたカテゴリを保持
+    var cheatDayHistory: [Date] = [] // チートデイの履歴を保存するためのプロパティを追加
 }
