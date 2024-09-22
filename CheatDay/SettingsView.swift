@@ -19,9 +19,7 @@ struct SettingsView: View {
                     NavigationLink(destination: FAQView()) {
                         Text("よくある質問")
                     }
-                    NavigationLink(destination: ContactSupportView()) {
-                        Text("お問い合わせ")
-                    }
+                    Link("お問い合わせ", destination: URL(string: "https://hiroki-saito.com/cheatday-support-page")!)
                     HStack {
                         Text("アプリバージョン")
                         Spacer()
@@ -31,9 +29,7 @@ struct SettingsView: View {
                 
                 // Legal Information
                 Section(header: Text("法的情報")) {
-                    NavigationLink(destination: PrivacyPolicyView()) {
-                        Text("プライバシーポリシー")
-                    }
+                    Link("プライバシーポリシー", destination: URL(string: "https://hiroki-saito.com/cheatday-privacy-policy")!)
                     NavigationLink(destination: TermsOfServiceView()) {
                         Text("利用規約")
                     }
@@ -51,14 +47,6 @@ struct SettingsView: View {
                     }) {
                         Text("アプリを評価する")
                     }
-                    NavigationLink(destination: SendFeedbackView()) {
-                        Text("フィードバックを送る")
-                    }
-                }
-                
-                // Storage & Data
-                NavigationLink(destination: ClearCacheView()) {
-                    Text("キャッシュ管理")
                 }
                 
                 // 11. Copyright Information
