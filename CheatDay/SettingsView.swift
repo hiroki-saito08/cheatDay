@@ -11,6 +11,11 @@ struct SettingsView: View {
                     Toggle("通知を有効にする", isOn: $notificationsEnabled)
                         .onChange(of: notificationsEnabled) { value in
                             UserDefaults.standard.set(value, forKey: "notificationsEnabled")
+                            if value {
+                                requestNotificationPermission()
+                            } else {
+                                disableNotifications()
+                            }
                         }
                 }
                 
@@ -19,9 +24,7 @@ struct SettingsView: View {
                     NavigationLink(destination: FAQView()) {
                         Text("よくある質問")
                     }
-                    NavigationLink(destination: ContactSupportView()) {
-                        Text("お問い合わせ")
-                    }
+                    Link("お問い合わせ", destination: URL(string: "https://hiroki-saito.com/cheatday-support-page")!)
                     HStack {
                         Text("アプリバージョン")
                         Spacer()
@@ -31,9 +34,7 @@ struct SettingsView: View {
                 
                 // Legal Information
                 Section(header: Text("法的情報")) {
-                    NavigationLink(destination: PrivacyPolicyView()) {
-                        Text("プライバシーポリシー")
-                    }
+                    Link("プライバシーポリシー", destination: URL(string: "https://hiroki-saito.com/cheatday-privacy-policy")!)
                     NavigationLink(destination: TermsOfServiceView()) {
                         Text("利用規約")
                     }
@@ -51,14 +52,6 @@ struct SettingsView: View {
                     }) {
                         Text("アプリを評価する")
                     }
-                    NavigationLink(destination: SendFeedbackView()) {
-                        Text("フィードバックを送る")
-                    }
-                }
-                
-                // Storage & Data
-                NavigationLink(destination: ClearCacheView()) {
-                    Text("キャッシュ管理")
                 }
                 
                 // 11. Copyright Information
@@ -72,10 +65,36 @@ struct SettingsView: View {
             .navigationBarTitle("設定", displayMode: .inline)
         }
     }
-    func clearCache() {
-        // Implement cache clearing logic here
-        print("Cache cleared")
-        // You can show a confirmation dialog or toast message if needed
+    
+//    func clearCache() {
+//        // Implement cache clearing logic here
+//        print("Cache cleared")
+//        // You can show a confirmation dialog or toast message if needed
+//    }
+    
+    // 通知許可をリクエスト
+    func requestNotificationPermission() {
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
+            if granted {
+                print("通知が許可されました")
+                scheduleNotifications() // 許可されたら通知をスケジュール
+            } else {
+                print("通知が拒否されました")
+            }
+        }
+    }
+    
+    // スケジュールされた通知を無効化
+    func disableNotifications() {
+        let center = UNUserNotificationCenter.current()
+        center.removeAllPendingNotificationRequests()
+        print("通知が無効化されました")
+    }
+
+    // 通知をスケジュール（詳細は後で実装）
+    func scheduleNotifications() {
+        print("通知がスケジュールされました")
     }
 }
 
