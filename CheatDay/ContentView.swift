@@ -1,21 +1,44 @@
 import SwiftUI
 import CoreML
-import GoogleMobileAds // Ensure this import is here for the ads
+import GoogleMobileAds
 
 struct ContentView: View {
     @State private var goals: [Goal] = [] // Initialize with an empty array
-
-    init() {
-        // テストデータを削除し、goals は空の状態で初期化
-    }
 
     var body: some View {
         MainView(goals: $goals)
             .customFont(size: 20) // Apply the custom font modifier Yomogi-Regular font
             .accentColor(.green) // Set a friendly accent color
+            .onAppear {
+                // アプリ起動時にデータを UserDefaults から読み込む
+                if let savedGoals = loadGoals() {
+                    goals = savedGoals
+                }
+            }
+            .onDisappear {
+                // アプリ終了時にデータを保存
+                saveGoals()
+            }
     }
 
-    // Move the prediction function inside the ContentView to avoid redeclaration
+    // データを UserDefaults に保存
+    func saveGoals() {
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(goals) {
+            UserDefaults.standard.set(encoded, forKey: "savedGoals")
+        }
+    }
+
+    // データを UserDefaults から読み込む
+    func loadGoals() -> [Goal]? {
+        if let savedGoals = UserDefaults.standard.data(forKey: "savedGoals") {
+            let decoder = JSONDecoder()
+            return try? decoder.decode([Goal].self, from: savedGoals)
+        }
+        return nil
+    }
+
+    // Prediction function for goal category
     private func predictCategory(from goalTitle: String) -> String {
         guard let model = try? CheatDay_Machine_Learning(configuration: .init()) else {
             return "General" // Default category if prediction fails
