@@ -6,46 +6,68 @@ struct PlansView: View {
     var body: some View {
         NavigationView {
             ScrollView {
-                LazyVStack(alignment: .leading, spacing: 10) {
-                    ForEach(generateFutureDays(), id: \.self) { day in
-                        if isFirstDayOfMonth(day) {
-                            Text(monthHeader(for: day))
-                                .font(.yomogiHeadline())
-                                .padding(.top, 20)
-                        }
-                        VStack(alignment: .leading) {
-                            HStack(alignment: .center) {
-                                Text(dayHeader(for: day))
-                                    .font(isCheatDay(day) ? .yomogiTitle() : day == Date() ? .yomogiHeadline().bold() : .yomogiSubheadline())
-                                    .foregroundColor(isCheatDay(day) ? .white : day == Date() ? .red : .gray)
-                                    .lineLimit(1)
-                                    .padding()
-                                    .background(isCheatDay(day) ? Color.green : Color.clear)
-                                    .cornerRadius(10)
-                                
-                                Spacer()
+                VStack(alignment: .leading, spacing: 10) {
+                    // 現在の月を表示（フォントを統一）
+                    Text(monthHeader(for: Date()))
+                        .font(.custom("Yomogi-Regular", size: 28))
+                        .padding(.top)
+                    
+                    LazyVStack(alignment: .leading, spacing: 10) {
+                        ForEach(generateFutureDays(), id: \.self) { day in
+                            if isFirstDayOfMonth(day) {
+                                Text(monthHeader(for: day))
+                                    .font(.custom("Yomogi-Regular", size: 28)) // フォントを統一
+                                    .padding(.top, 20)
+                            }
+                            VStack(alignment: .leading) {
+                                HStack(alignment: .center) {
+                                    Text(dayHeader(for: day))
+                                        .font(isCheatDay(day) ? .yomogiTitle() : Calendar.current.isDateInToday(day) ? .headline.bold() : .yomogiSubheadline())
+                                        .foregroundColor(isCheatDay(day) ? .white : Calendar.current.isDateInToday(day) ? .red : .gray)
+                                        .lineLimit(1)
+                                        .padding()
+                                        .background(isCheatDay(day) ? Color.green : Calendar.current.isDateInToday(day) ? Color.yellow : Color.clear)
+                                        .cornerRadius(10)
+                                    
+                                    Spacer()
 
-                                if let goal = goalForDay(day) {
-                                    Text(daysUntil(day) == 0 ? "今日は \(goal.title) のチートデイです！！" : "\(daysUntil(day)) 日後は \(goal.title) のチートデイ")
-                                        .font(.yomogiBody())
-                                        .foregroundColor(.primary)
-                                        .multilineTextAlignment(.leading)
-                                        .lineLimit(nil)
-                                        .padding(.leading, 15)
-                                        .padding(.trailing, 15)
-                                        .frame(maxWidth: .infinity, alignment: .leading)
+                                    // 同日に複数のチートデイがある場合、まとめて表示
+                                    let goalsForDay = goals.filter { Calendar.current.isDate($0.nextCheatDay, inSameDayAs: day) }
+                                    if !goalsForDay.isEmpty {
+                                        let goalTitles = goalsForDay.map { $0.title }.joined(separator: "と")
+                                        let daysUntilCheatDay = daysUntil(day)
+                                        if daysUntilCheatDay == 0 {
+                                            Text("今日は \(goalTitles) のチートデイです！")
+                                                .font(.yomogiBody())
+                                                .foregroundColor(.primary)
+                                                .multilineTextAlignment(.leading)
+                                                .lineLimit(nil)
+                                                .padding(.leading, 15)
+                                                .padding(.trailing, 15)
+                                                .frame(maxWidth: .infinity, alignment: .leading)
+                                        } else {
+                                            Text("\(daysUntilCheatDay) 日後は \(goalTitles) のチートデイです！")
+                                                .font(.yomogiBody())
+                                                .foregroundColor(.primary)
+                                                .multilineTextAlignment(.leading)
+                                                .lineLimit(nil)
+                                                .padding(.leading, 15)
+                                                .padding(.trailing, 15)
+                                                .frame(maxWidth: .infinity, alignment: .leading)
+                                        }
+                                    }
                                 }
                             }
+                            .padding(.vertical, 5)
+                            .background(day == Date() || isCheatDay(day) ? Color(UIColor.systemGroupedBackground) : Color.clear)
+                            .cornerRadius(8)
+                            .id(day)
                         }
-                        .padding(.vertical, 5)
-                        .background(day == Date() || isCheatDay(day) ? Color(UIColor.systemGroupedBackground) : Color.clear)
-                        .cornerRadius(8)
-                        .id(day)
                     }
                 }
                 .padding(.horizontal)
             }
-            .navigationBarTitle(formattedDate(Date()), displayMode: .inline) // Match title style with Rewards and Battle History
+            .navigationBarTitle(formattedDate(Date()), displayMode: .inline)
         }
     }
     
@@ -112,7 +134,7 @@ struct PlansView: View {
         
         let components = calendar.dateComponents([.day], from: startOfToday, to: startOfTargetDay)
         
-        return components.day ?? 0 // 1日を加算しない
+        return components.day ?? 0
     }
 }
 
