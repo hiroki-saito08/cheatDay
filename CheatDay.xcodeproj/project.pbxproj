@@ -58,6 +58,7 @@
 		B07969782C71C690006DDB90 /* Font+CustomStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07969772C71C690006DDB90 /* Font+CustomStyles.swift */; };
 		B07969792C71C690006DDB90 /* Font+CustomStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07969772C71C690006DDB90 /* Font+CustomStyles.swift */; };
 		B079697A2C71C690006DDB90 /* Font+CustomStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07969772C71C690006DDB90 /* Font+CustomStyles.swift */; };
+		B0C93F6C2CA78EAB00BC0D6B /* BackgroundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C93F6B2CA78EA700BC0D6B /* BackgroundImageView.swift */; };
 		B0DA98322C75664B000D31FF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DA98312C75664B000D31FF /* SettingsView.swift */; };
 		B0DA98342C756E1E000D31FF /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DA98332C756E1E000D31FF /* CustomTabBarView.swift */; };
 		B0E842D52C83DFA500FDB791 /* BottomBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E842D42C83DFA500FDB791 /* BottomBarView.swift */; };
@@ -161,6 +162,7 @@
 		B079696F2C71C38B006DDB90 /* PatrickHand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PatrickHand-Regular.ttf"; sourceTree = "<group>"; };
 		B07969732C71C3D8006DDB90 /* CustomViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewModifier.swift; sourceTree = "<group>"; };
 		B07969772C71C690006DDB90 /* Font+CustomStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+CustomStyles.swift"; sourceTree = "<group>"; };
+		B0C93F6B2CA78EA700BC0D6B /* BackgroundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageView.swift; sourceTree = "<group>"; };
 		B0DA98312C75664B000D31FF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		B0DA98332C756E1E000D31FF /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
 		B0E842D42C83DFA500FDB791 /* BottomBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBarView.swift; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 				B079695E2C7198CD006DDB90 /* MainView.swift */,
 				B06DFB572C6F2C0900FCC272 /* GoalsView.swift */,
 				B06DFB592C6F2C1F00FCC272 /* PlansView.swift */,
+				B00068342C75BAE900BE9445 /* GoalFormView.swift */,
 				B06DFB5B2C6F2C3000FCC272 /* RewardsView.swift */,
 				B06DFB5D2C6F2C4300FCC272 /* BattleHistoryView.swift */,
 				B079695A2C7195C8006DDB90 /* GoalGraphView.swift */,
@@ -305,7 +308,6 @@
 				B00068442C75D8C000BE9445 /* MailView.swift */,
 				B00068362C75CCE200BE9445 /* FAQView.swift */,
 				B0DA98332C756E1E000D31FF /* CustomTabBarView.swift */,
-				B00068342C75BAE900BE9445 /* GoalFormView.swift */,
 				B06DFB5F2C6F2C6C00FCC272 /* Goal.swift */,
 				B06DFB612C6F330400FCC272 /* GoalData.swift */,
 				B000684E2C75DDEB00BE9445 /* HandwrittenGoalModifier.swift */,
@@ -316,6 +318,7 @@
 				B01B442C2C81C19800F2A628 /* AdBannerView.swift */,
 				B0E842D42C83DFA500FDB791 /* BottomBarView.swift */,
 				B0342BCE2C9295DC008973B6 /* RequestNotificationPermission.swift */,
+				B0C93F6B2CA78EA700BC0D6B /* BackgroundImageView.swift */,
 				B0342BD12C929625008973B6 /* ScheduleNotification.swift */,
 				B067A5542C697E20009CE862 /* Assets.xcassets */,
 				B067A5562C697E20009CE862 /* CheatDay.entitlements */,
@@ -639,6 +642,7 @@
 				B00068412C75CE2E00BE9445 /* SendFeedbackView.swift in Sources */,
 				B06DFB5A2C6F2C1F00FCC272 /* PlansView.swift in Sources */,
 				B000683D2C75CDE800BE9445 /* TermsOfServiceView.swift in Sources */,
+				B0C93F6C2CA78EAB00BC0D6B /* BackgroundImageView.swift in Sources */,
 				B06DFB5E2C6F2C4300FCC272 /* BattleHistoryView.swift in Sources */,
 				B0EBADD32C7D3342004F99B7 /* CheatDay_Machine Learning.mlmodel in Sources */,
 				B067A54F2C697E1D009CE862 /* CheatDayApp.swift in Sources */,
@@ -724,7 +728,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -859,7 +863,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hirokisaito.CheatDay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -908,7 +912,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hirokisaito.CheatDay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
