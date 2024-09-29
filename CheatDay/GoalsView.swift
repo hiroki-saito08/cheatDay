@@ -134,10 +134,33 @@ struct GoalsView: View {
             }
             .onAppear {
                 dailyQuote = DailyQuotes.getDailyQuote() // Fetch a daily quote
+                if let savedGoals = loadGoals() {
+                    goals = savedGoals
+                }
+            }
+            .onDisappear {
+                saveGoals()
             }
         }
     }
     
+    // データの保存
+    func saveGoals() {
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(goals) {
+            UserDefaults.standard.set(encoded, forKey: "savedGoals")
+        }
+    }
+
+    // データの読み込み
+    func loadGoals() -> [Goal]? {
+        if let savedGoals = UserDefaults.standard.data(forKey: "savedGoals") {
+            let decoder = JSONDecoder()
+            return try? decoder.decode([Goal].self, from: savedGoals)
+        }
+        return nil
+    }
+
     // 削除アクションで IndexSet を受け取り、goals から削除
     func deleteGoal(at offsets: IndexSet) {
         goals.remove(atOffsets: offsets)
