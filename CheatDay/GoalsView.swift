@@ -31,8 +31,9 @@ struct GoalsView: View {
                     List {
                         ForEach(goals) { goal in
                             VStack(alignment: .leading, spacing: 8) {
-                                Text(goal.title)
-                                    .font(.yomogiHeadline().bold())
+                                // 目標のタイトルを太字にし、引用符で囲む
+                                Text("「\(goal.title)」")
+                                    .font(.yomogiHeadline().bold()) // 太字に変更
                                     .padding(.bottom, 2)
                                 Text("目的: \(goal.purpose)")
                                     .font(.yomogiBody())
@@ -49,29 +50,33 @@ struct GoalsView: View {
                                     .font(.yomogiBody())
                                     .padding(.bottom, 2)
                                 if let encouragement = goal.encouragement, !encouragement.isEmpty {
+                                    // 励ましの言葉も太字に変更
                                     Text("励ましの言葉: \(encouragement)")
-                                        .font(.yomogiSubheadline())
+                                        .font(.yomogiSubheadline().bold()) // 太字に変更
                                         .padding(.bottom, 2)
                                 }
                             }
                             .padding(.vertical, 4)
-                            .contextMenu {
-                                Button(action: {
-                                    editingGoal = goal
-                                    showGoalForm = true
-                                }) {
-                                    Text("編集")
-                                    Image(systemName: "pencil")
-                                }
-                                Button(role: .destructive, action: {
+                            // スワイプで削除と編集を追加
+                            .swipeActions(edge: .trailing) {
+                                Button(role: .destructive) {
                                     goalToDelete = goal
                                     showDeleteConfirmation = true
-                                }) {
-                                    Text("削除")
-                                    Image(systemName: "trash")
+                                } label: {
+                                    Label("削除", systemImage: "trash")
                                 }
                             }
+                            .swipeActions(edge: .leading) {
+                                Button {
+                                    editingGoal = goal
+                                    showGoalForm = true
+                                } label: {
+                                    Label("編集", systemImage: "pencil")
+                                }
+                                .tint(.blue)
+                            }
                         }
+                        .onDelete(perform: deleteGoal) // スワイプで削除が動作する
                     }
                 }
             }
@@ -121,7 +126,7 @@ struct GoalsView: View {
                     message: Text("この操作は取り消せません。"),
                     primaryButton: .destructive(Text("削除")) {
                         if let goal = goalToDelete {
-                            deleteGoal(goal)
+                            deleteGoalDirect(goal)
                         }
                     },
                     secondaryButton: .cancel()
@@ -133,7 +138,13 @@ struct GoalsView: View {
         }
     }
     
-    func deleteGoal(_ goal: Goal) {
+    // 削除アクションで IndexSet を受け取り、goals から削除
+    func deleteGoal(at offsets: IndexSet) {
+        goals.remove(atOffsets: offsets)
+    }
+    
+    // 削除の直接処理用の関数
+    func deleteGoalDirect(_ goal: Goal) {
         if let index = goals.firstIndex(where: { $0.id == goal.id }) {
             goals.remove(at: index)
         }

@@ -24,6 +24,12 @@ struct GoalFormView: View {
                     TextField("励ましの言葉 (オプション)", text: $encouragement)
                     TextField("サイクル日数", text: $cycleDays)
                         .keyboardType(.numberPad)
+                        .onChange(of: cycleDays) { newValue in
+                            // 2桁を超えないように制限
+                            if newValue.count > 2 {
+                                cycleDays = String(newValue.prefix(2))
+                            }
+                        }
                 }
                 
                 if let errorMessage = errorMessage {

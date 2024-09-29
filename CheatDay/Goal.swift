@@ -1,6 +1,6 @@
 import Foundation
 
-struct Goal: Identifiable {
+struct Goal: Identifiable, Codable {
     let id = UUID()
     var title: String
     var purpose: String

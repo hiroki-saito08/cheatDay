@@ -8,62 +8,70 @@ struct RewardsView: View {
     var body: some View {
         NavigationView {
             VStack(spacing: 0) {
-                ScrollView {
-                    VStack(spacing: 20) {
-                        ForEach(goals) { goal in
-                            VStack(alignment: .leading, spacing: 10) {
-                                Text(goal.title)
-                                    .font(.yomogiHeadline())
-                                    .fontWeight(.bold)
-                                    .padding(.bottom, 5)
-                                
-                                if isCheatDay(for: goal) {
-                                    HStack {
-                                        Spacer()
-                                        HStack(spacing: 5) {
-                                            Image("star_color")
-                                                .resizable()
-                                                .frame(width: 24, height: 24)
-                                                .rotationEffect(.degrees(15))
-                                            Text("がんばったね！")
-                                                .font(.yomogiTitle())
-                                                .foregroundColor(Color(red: 0.85, green: 0.65, blue: 0.0))
-                                                .fontWeight(.bold)
-                                            Image("star_color")
-                                                .resizable()
-                                                .frame(width: 24, height: 24)
-                                                .rotationEffect(.degrees(15))
-                                        }
-                                        Spacer()
-                                    }
-                                    Text(goal.reward)
-                                        .font(.yomogiTitle())
+                if goals.isEmpty {
+                    Spacer()
+                    Text("目標を登録してください！")
+                        .font(.yomogiHeadline())
+                        .foregroundColor(.gray)
+                    Spacer()
+                } else {
+                    ScrollView {
+                        VStack(spacing: 20) {
+                            ForEach(goals) { goal in
+                                VStack(alignment: .leading, spacing: 10) {
+                                    Text(goal.title)
+                                        .font(.yomogiHeadline())
                                         .fontWeight(.bold)
-                                        .foregroundColor(.white)
-                                        .padding()
-                                        .frame(maxWidth: .infinity)
-                                        .background(Color.green)
-                                        .cornerRadius(10)
-                                } else {
-                                    Text(goal.reward)
-                                        .font(.yomogiBody())
-                                        .padding()
-                                        .frame(maxWidth: .infinity)
-                                        .background(Color.gray.opacity(0.2))
-                                        .cornerRadius(10)
+                                        .padding(.bottom, 5)
+
+                                    if isCheatDay(for: goal) {
+                                        HStack {
+                                            Spacer()
+                                            HStack(spacing: 5) {
+                                                Image("star_color")
+                                                    .resizable()
+                                                    .frame(width: 24, height: 24)
+                                                    .rotationEffect(.degrees(15))
+                                                Text("がんばったね！")
+                                                    .font(.yomogiTitle())
+                                                    .foregroundColor(Color(red: 0.85, green: 0.65, blue: 0.0))
+                                                    .fontWeight(.bold)
+                                                Image("star_color")
+                                                    .resizable()
+                                                    .frame(width: 24, height: 24)
+                                                    .rotationEffect(.degrees(15))
+                                            }
+                                            Spacer()
+                                        }
+                                        Text(goal.reward)
+                                            .font(.yomogiTitle())
+                                            .fontWeight(.bold)
+                                            .foregroundColor(.white)
+                                            .padding()
+                                            .frame(maxWidth: .infinity)
+                                            .background(Color.green)
+                                            .cornerRadius(10)
+                                    } else {
+                                        Text(goal.reward)
+                                            .font(.yomogiBody())
+                                            .padding()
+                                            .frame(maxWidth: .infinity)
+                                            .background(Color.gray.opacity(0.2))
+                                            .cornerRadius(10)
+                                    }
                                 }
+                                .padding(.horizontal)
                             }
-                            .padding(.horizontal)
                         }
+                        .padding(.vertical)
                     }
-                    .padding(.vertical)
                 }
 
-                // Ad space positioned just above the bottom menu
-                if let bannerView = bannerView {
+                // 広告を表示（目標がある場合のみ）
+                if let bannerView = bannerView, !goals.isEmpty {
                     BannerAdView(bannerView: bannerView)
                         .frame(width: bannerView.frame.width, height: bannerView.frame.height * 2)
-                        .padding(.bottom, 30) // Adjusted padding to move the ad closer to the bottom menu
+                        .padding(.bottom, 30)
                 }
             }
             .toolbar {
@@ -78,7 +86,9 @@ struct RewardsView: View {
             }
             .navigationBarTitleDisplayMode(.inline)
             .onAppear {
-                setupAd()
+                if !goals.isEmpty {
+                    setupAd() // 目標がある場合のみ広告をセットアップ
+                }
             }
         }
     }
@@ -109,14 +119,5 @@ struct BannerAdView: UIViewRepresentable {
 
     func updateUIView(_ uiView: GADBannerView, context: Context) {
         // Update the view if needed
-    }
-}
-
-struct RewardsView_Previews: PreviewProvider {
-    static var previews: some View {
-        RewardsView(goals: .constant([
-            Goal(title: "読書の習慣をつける", purpose: "リラクゼーション", reward: "もっと読む", encouragement: nil, cycleDays: 7, nextCheatDay: Date(), category: "Reading"),
-            Goal(title: "映画鑑賞を楽しむ", purpose: "エンターテインメント", reward: "別の映画を見る", encouragement: "楽しみ続けてください！", cycleDays: 10, nextCheatDay: Calendar.current.date(byAdding: .day, value: 3, to: Date())!, category: "Entertainment")
-        ]))
     }
 }
