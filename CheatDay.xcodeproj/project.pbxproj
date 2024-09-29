@@ -58,6 +58,7 @@
 		B07969782C71C690006DDB90 /* Font+CustomStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07969772C71C690006DDB90 /* Font+CustomStyles.swift */; };
 		B07969792C71C690006DDB90 /* Font+CustomStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07969772C71C690006DDB90 /* Font+CustomStyles.swift */; };
 		B079697A2C71C690006DDB90 /* Font+CustomStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07969772C71C690006DDB90 /* Font+CustomStyles.swift */; };
+		B0C93F6C2CA78EAB00BC0D6B /* BackgroundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C93F6B2CA78EA700BC0D6B /* BackgroundImageView.swift */; };
 		B0DA98322C75664B000D31FF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DA98312C75664B000D31FF /* SettingsView.swift */; };
 		B0DA98342C756E1E000D31FF /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DA98332C756E1E000D31FF /* CustomTabBarView.swift */; };
 		B0E842D52C83DFA500FDB791 /* BottomBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E842D42C83DFA500FDB791 /* BottomBarView.swift */; };
@@ -161,6 +162,7 @@
 		B079696F2C71C38B006DDB90 /* PatrickHand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PatrickHand-Regular.ttf"; sourceTree = "<group>"; };
 		B07969732C71C3D8006DDB90 /* CustomViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewModifier.swift; sourceTree = "<group>"; };
 		B07969772C71C690006DDB90 /* Font+CustomStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+CustomStyles.swift"; sourceTree = "<group>"; };
+		B0C93F6B2CA78EA700BC0D6B /* BackgroundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageView.swift; sourceTree = "<group>"; };
 		B0DA98312C75664B000D31FF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		B0DA98332C756E1E000D31FF /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
 		B0E842D42C83DFA500FDB791 /* BottomBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBarView.swift; sourceTree = "<group>"; };
@@ -316,6 +318,7 @@
 				B01B442C2C81C19800F2A628 /* AdBannerView.swift */,
 				B0E842D42C83DFA500FDB791 /* BottomBarView.swift */,
 				B0342BCE2C9295DC008973B6 /* RequestNotificationPermission.swift */,
+				B0C93F6B2CA78EA700BC0D6B /* BackgroundImageView.swift */,
 				B0342BD12C929625008973B6 /* ScheduleNotification.swift */,
 				B067A5542C697E20009CE862 /* Assets.xcassets */,
 				B067A5562C697E20009CE862 /* CheatDay.entitlements */,
@@ -639,6 +642,7 @@
 				B00068412C75CE2E00BE9445 /* SendFeedbackView.swift in Sources */,
 				B06DFB5A2C6F2C1F00FCC272 /* PlansView.swift in Sources */,
 				B000683D2C75CDE800BE9445 /* TermsOfServiceView.swift in Sources */,
+				B0C93F6C2CA78EAB00BC0D6B /* BackgroundImageView.swift in Sources */,
 				B06DFB5E2C6F2C4300FCC272 /* BattleHistoryView.swift in Sources */,
 				B0EBADD32C7D3342004F99B7 /* CheatDay_Machine Learning.mlmodel in Sources */,
 				B067A54F2C697E1D009CE862 /* CheatDayApp.swift in Sources */,
